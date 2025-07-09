@@ -4,7 +4,7 @@ const Navbar = () => {
     return (
         <div className="flex justify-center md:justify-between items-center p-4 ">
             <a href="#"
-                className="flex items-center font-bold text-xl md:text-2xl">
+                className="flex items-center font-bold text-2xl">
                 <Container className="mr-2" />
                 BAKI
                 <span className="text-red-500">DEV</span>

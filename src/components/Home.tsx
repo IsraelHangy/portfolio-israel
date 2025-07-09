@@ -1,5 +1,5 @@
 import { FileText, Mail } from "lucide-react"
-import image from "../assets/imageIsrael.webp"; 
+import image from "../assets/imageIsrael.webp";
 
 const Home = () => {
   return (
@@ -8,24 +8,28 @@ const Home = () => {
         <h1 className="text-4xl md:text-5xl font-bold text-center md:text-left mt-4 md:mt-0">
           Bonjour, <br /> je m'appelle {" "} <span className="text-red-500">IsraelHangy</span>
         </h1>
-        <p className="my-4 text-md text-center md:text-left">
-          Je suis un développeur web full stack avec une fort appétence sur le UI/UX Design<br /> passionné  par la création d'applications web modernes et performantes.<br />
-          J'aime relever des défis techniques et apprendre de nouvelles technologies telles<br /> que React , Tailwind css, Typescript et Node.js pour améliorer mes compétences.
+        <p className="mt-3 md:mt-7 text-md text-center md:text-left font-poppins w-full md:max-w-xl">
+          Je suis un développeur web full stack avec une fort appétence sur le UI/UX Design.
+          Passionné par la création d'applications web modernes et performantes.
+          J'aime relever des défis techniques et apprendre de nouvelles technologies telles
+          que React, Tailwind CSS, TypeScript et Node.js pour améliorer mes compétences.
         </p>
+
+
         <div className="flex justify-center md:justify-start space-x-4 mt-4">
           <a href="#" className="btn btn-lg bg-red-500 hover:bg-red-800 text-black rounded-lg md:w-fit">
             <Mail className="w-5 h-5" />
             Contactez-moi
           </a>
           <a href="#" className="btn btn-lg bg-red-500 hover:bg-red-800 text-black rounded-lg md:w-fit">
-            <FileText className="w-5 h-5"/>
+            <FileText className="w-5 h-5" />
             Mon CV
           </a>
         </div>
       </div>
 
       <div className="flex justify-center items-center">
-        <img src={image} alt="Photo de profil"  className="w-[26rem] h-[26rem]  rounded-xl object-cover shadow-lg" />
+        <img src={image} alt="Photo de profil" className="w-[26rem] h-[26rem]  rounded-xl object-cover shadow-lg" />
       </div>
     </div>
   )

@@ -1,9 +1,11 @@
-const Apropos = () => {
+import Title from "./Title"
+
+const About = () => {
   return (
     <div>
-      
+      <Title title ="A propos"/>
     </div>
-  )
+  ) 
 }
 
-export default Apropos
+export default About
