@@ -9,7 +9,7 @@ const Navbar = () => {
                 BAKI
                 <span className="text-red-500">DEV</span>
             </a>
-            <ul className="hidden md:flex space-x-4">
+            <ul className="hidden md:flex space-x-3">
                 <li>
                     <a href="#" className="btn btn-lg btn-ghost">Accueil</a>
                 </li>
