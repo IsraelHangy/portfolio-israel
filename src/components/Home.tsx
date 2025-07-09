@@ -29,7 +29,7 @@ const Home = () => {
       </div>
 
       <div className="flex justify-center items-center">
-        <img src={image} alt="Photo de profil" className="w-[26rem] h-[26rem]  rounded-xl object-cover shadow-lg" />
+        <img src={image} alt="Photo de profil" className="w-[26rem] h-[26rem]  rounded-xl object-cover" />
       </div>
     </div>
   )
