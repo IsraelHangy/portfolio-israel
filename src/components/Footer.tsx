@@ -15,7 +15,7 @@ const Footer = () => {
             </aside>
             <nav>
                 <div className="grid grid-flow-col gap-4">
-                    <a href="https://x.com/home" target="_blank" rel="noopener noreferrer">
+                    <a href="https://x.com/IsraelNgeve?t=RSze1kboTwadGK35AsIcjg&s=09" target="_blank" rel="noopener noreferrer">
                         <Twitter className="w-6 h-6 md:w-8 md:h-8 text-current hover:text-red-500" />
                     </a>
                     <a href="https://github.com/IsraelHangy?tab=repositories" target="_blank" rel="noopener noreferrer">
