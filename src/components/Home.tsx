@@ -6,10 +6,10 @@ const Home = () => {
     <div id="Home" className="flex flex-col-reverse md:flex-row justify-center md:justify-between  items-center my-10 md:my-32">
       <div className="flex flex-col">
         <h1 className="text-4xl md:text-5xl font-bold text-center md:text-left mt-4 md:mt-0">
-          Bonjour, <br /> je m'appelle {" "} <span className="text-red-500">IsraelHangy</span>
+          Salut !, <br /> je m'appelle {" "} <span className="text-red-500">IsraelHangy</span>
         </h1>
         <p className="mt-3 md:mt-7 text-md text-center md:text-left font-poppins w-full md:max-w-xl">
-          Je suis un développeur web full stack avec une fort appétence sur le UI/UX Design.
+          Je suis un développeur web full stack avec une forte appétence sur le UI/UX Design.
           Passionné par la création d'applications web modernes et performantes.
           J'aime relever des défis techniques et apprendre de nouvelles technologies telles
           que React, Tailwind CSS, TypeScript et Node.js pour améliorer mes compétences.
