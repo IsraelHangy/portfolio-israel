@@ -3,7 +3,7 @@ import image from "../assets/imageIsrael.webp";
 
 const Home = () => {
   return (
-    <div className="flex flex-col-reverse md:flex-row justify-center md:justify-between  items-center my-10 md:my-32">
+    <div id="Home" className="flex flex-col-reverse md:flex-row justify-center md:justify-between  items-center my-10 md:my-32">
       <div className="flex flex-col">
         <h1 className="text-4xl md:text-5xl font-bold text-center md:text-left mt-4 md:mt-0">
           Bonjour, <br /> je m'appelle {" "} <span className="text-red-500">IsraelHangy</span>

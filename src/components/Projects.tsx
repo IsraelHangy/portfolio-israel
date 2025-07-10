@@ -13,8 +13,8 @@ const projects = [
     title: 'Projet Portfolio',
     description:'Création d’un site web statique en HTML et CSS dans le cadre de mes premières semaines de formation à Kadea. Ce projet m’a permis d’apprendre à structurer une page web et à la styliser, en mettant en pratique les bases du développement front-end',
     technologies: ['HTML', 'CSS', 'Responsive'],
-    demoLink: '#',
-    repoLink: '#',
+    demoLink: 'https://israelhangy.github.io/portfolio-project-Israel/',
+    repoLink: 'https://github.com/IsraelHangy/portfolio-project-Israel',
     image: img1,
    
   },
@@ -30,9 +30,9 @@ const projects = [
   {
   
     id: 3,
-    title: 'Gestion de Projet & Gestion des taches Twitter Clone',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae magni deserunt debitis recusandae ab harum totam, eum facilis et ratione officia ut inventore aspernatur',
-    technologies: ['Git', 'Github', 'kanban', 'Scrum', 'Agile'],
+    title: 'Gestion de Projet Twitter Clone',
+    description: 'Mise en place et réalisation d’un clone de X (Twitter) en équipe, en appliquant la méthodologie agile. Utilisation d’outils de gestion de projet ( GitHub Projects) pour suivre les tâches, assurer la collaboration et garantir une progression continue et structurée.',
+    technologies: ['Git', 'Github', 'kanban', 'Agile'],
     demoLink: 'tweeter-clone-with-adonis-js-isr-production.up.railway.app',
     repoLink: 'https://github.com/kadea-academy-learners/tweeter-clone-with-adonis-js-IsraelHangy/issues?q=is%3Aissue%20state%3Aclosed',
     image: img3,
@@ -40,7 +40,7 @@ const projects = [
   {
     id: 4,
     title: 'Application Clone Twitter X',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae magni deserunt debitis recusandae ab harum totam, eum facilis et ratione officia ut inventore aspernatur',
+    description: 'Réalisation d’un clone de X (anciennement Twitter) avec le framework AdonisJS. Le projet comprend la création d’interfaces utilisateur statiques, l’intégration de données dynamiques via des contrôleurs et modèles.',
     technologies: ['HTML', 'Tailwind', 'Node js', 'Typescript', 'Adonis js','Railway'],
     demoLink: 'tweeter-clone-with-adonis-js-isr-production.up.railway.app',
     repoLink: 'https://github.com/kadea-academy-learners/tweeter-clone-with-adonis-js-IsraelHangy',
@@ -49,7 +49,7 @@ const projects = [
    {
     id: 5,
     title: 'Fashion Boutique WordPress',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae magni deserunt debitis recusandae ab harum totam, eum facilis et ratione officia ut inventore aspernatur',
+    description: 'Refonte du design d’une boutique en ligne sous WordPress à partir d’une maquette fournie par la cliente. Personnalisation des pages Contact et À propos, et création complète d’une page Équipe avec un design moderne et cohérent avec la charte graphique.',
     technologies: ['WordPress', 'WooCommerce', 'Elementor', 'Pantheon'],
     demoLink: 'https://dev-fashion-israel.pantheonsite.io/',
     repoLink: 'https://dev-fashion-israel.pantheonsite.io/wp-admin/',
