@@ -10,8 +10,8 @@ import imgTYPE from "../assets/techno/typescript.svg";
 import imgTAILWIND from "../assets/techno/tailwind.png";
 import imgADONIS from "../assets/techno/adonis.js.svg";
 
-import google from "../assets/companies/google.png";
-import meta from "../assets/companies/meta.webp";
+import snel from "../assets/companies/snel.png";
+import academy from "../assets/companies/academy.png";
 
 const skills = [
     { id: 1, name: "HTML", image: imgHTML },
@@ -37,7 +37,7 @@ const experiences = [
             "Conception et gestion d'une base de données sur SQL Server avec Oracle",
             "Conception et développement de l'appli desktop pour la gestion du parc Informatique avec WINDEV.",
         ],
-        image: google,
+        image: snel,
     },
     {
         id: 2,
@@ -54,7 +54,7 @@ const experiences = [
             "Réaliser une interface utilisateur avec une solution de gestion de contenu ou e-commerce avec WordPress"
             ,
         ],
-        image: meta,
+        image: academy,
     },
 ];
 
