@@ -25,12 +25,12 @@ const aboutSections = [
 
 const About = () => {
   return (
-    <div className="bg-base-300 p-10  md:p-30 ">
+    <div className="bg-base-300 p-10 md:pb-20 ">
       <div className=" mb-8">
         <Title title="A propos" />
       </div>
       
-      <div className="md:h-screen flex justify-center items-center">
+      <div className=" flex justify-center items-center">
         <div className="hidden md:block ">
           <img src={image} alt="Photo de profil" className="w-[29rem] h-[29rem] md: mr-20  rounded-xl object-cover" />
         </div>
