@@ -4,7 +4,7 @@ import img1 from '../assets/projects/1.png';
 import img2 from '../assets/projects/2.png';
 import img3 from '../assets/projects/3.png';
 import img4 from '../assets/projects/4.png';
-import {FolderSymlink, Video } from "lucide-react";
+import {Github, Telescope } from "lucide-react";
 
 
 const projects = [
@@ -31,7 +31,7 @@ const projects = [
   
     id: 3,
     title: 'Gestion de Projet Twitter Clone',
-    description: 'Mise en place et réalisation d’un clone de X (Twitter) en équipe, en appliquant la méthodologie agile. Utilisation d’outils de gestion de projet ( GitHub Projects) pour suivre les tâches, assurer la collaboration et garantir une progression continue et structurée.',
+    description: 'Mise en place et réalisation d’un clone de X (Twitter) en solo, en appliquant la méthodologie agile. Utilisation d’outils de gestion de projet ( GitHub Projects) pour suivre les tâches, assurer la collaboration et garantir une progression continue et structurée.',
     technologies: ['Git', 'Github', 'kanban', 'Agile'],
     demoLink: 'tweeter-clone-with-adonis-js-isr-production.up.railway.app',
     repoLink: 'https://github.com/kadea-academy-learners/tweeter-clone-with-adonis-js-IsraelHangy/issues?q=is%3Aissue%20state%3Aclosed',
@@ -90,13 +90,13 @@ const Projects = () => {
                 className="btn btn-lg bg-red-800  hover:bg-red-900 active:scale-95 transition-transform duration-150 w-2/3 text-white"
                 href={project.demoLink}
               >
-                Demo
-                <Video className="w-4 ml-2" />
+                Visitez le site
+                <Telescope className="w-4 ml-2" />
               </a>
 
 
               <a className="btn btn-neutral w-1/3 ml-2 mt-1" href={project.repoLink}>
-                <FolderSymlink  className="w-4"/>
+                <Github className="w-4"/>
               </a>
             </div>
           </div>
