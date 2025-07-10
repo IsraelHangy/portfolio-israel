@@ -60,17 +60,17 @@ const experiences = [
 
 const Experiences = () => {
     return (
-        <div >
+        <div className="md:pb-20">
              <div className="md:mt-10 mt-5 mb-8">
                 <Title title="Expériences & Technologies" />
              </div>
             
-            <div className="flex flex-col-reverse md:flex-row ">
-                <div className="flex flex-wrap gap-4 justify-center items-center md:w-1/3 mt-4 md:mt-0">
+            <div className="flex flex-col-reverse md:flex-row  ">
+                <div className="flex flex-wrap gap-4  md:w-1/3 mt-4 md:mt-0">
                     {
                         skills.map((skill) => (
                             <div key={skill.id} className="flex justify-center items-center flex-col">
-                                <div className="w-24 h-24 p-2 rounded-full border-2 border-red-500 ">
+                                <div className="w-24 h-24 p-2 rounded-full justify-center items-center border-2 border-red-500 ">
                                     <img src={skill.image} alt={skill.name} className="object-cover rounded-full h-full w-full" />
                                 </div>
                                 <span className="mt-2 text-sm">
