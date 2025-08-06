@@ -61,7 +61,7 @@ const experiences = [
 const Experiences = () => {
     return (
         <div className="md:pb-20"  id="Experiences">
-             <div className="md:mt-10 mt-5 mb-8">
+             <div className="md:mt-10 mt-5 mb-8 font-poppins text-2xl">
                 <Title title="Expériences & Technologies" />
              </div>
             
@@ -94,7 +94,7 @@ const Experiences = () => {
                                         <span className="text-sm"> {experience.period} </span>
                                     </div>
                                 </div>
-                                <ul className="list-disc ml-16 mt-2 font-poppins">
+                                <ul className="list-disc ml-16 mt-2 font-poppin">
                                     {
                                         experience.description.map((desc, index) => (
                                             <li key={index}>  {desc} </li>       

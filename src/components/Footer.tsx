@@ -6,12 +6,12 @@ const Footer = () => {
         <footer className="footer footer-center px-5 pb-5">
             <aside>
 
-                <Container className="w-8 h-8 md:w-10 md:h-10" />
+                <Container className="w-8 h-8 md:w-10 md:h-10 " />
                 <p className="font-bold text-xl md:text-2xl">
                     BAKI
                     <span className="text-red-500">DEV</span>
                 </p>
-                <p className="font-poppins text-xs">Copyright © {new Date().getFullYear()} -  Tous droits réservés</p>
+                <p className="font-poppins md:text-base text-xs">Copyright © {new Date().getFullYear()} -  Tous droits réservés</p>
             </aside>
             <nav>
                 <div className="grid grid-flow-col gap-4">

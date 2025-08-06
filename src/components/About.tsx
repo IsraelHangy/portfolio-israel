@@ -26,8 +26,8 @@ const aboutSections = [
 const About = () => {
   return (
     <div className="bg-base-300 p-10 md:pb-20 " id="About">
-      <div className=" mb-8">
-        <Title title="A propos" />
+      <div className=" mb-8 font-poppins">
+        <Title title="À PROPOS DE MOI" />
       </div>
       
       <div className=" flex justify-center items-center">
