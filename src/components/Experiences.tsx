@@ -1,6 +1,7 @@
 import Title from "./Title"
 import { motion } from "framer-motion"
-import { CalendarSync, LetterText, Paintbrush } from "lucide-react";
+import { DatabaseBackup, Paintbrush, Palette } from "lucide-react";
+
 
 import imgCSS from "../assets/techno/css.png";
 import imgJS from "../assets/techno/js.png";
@@ -30,13 +31,13 @@ const experiences = [
     id: 1,
     title: "Développeur Frontend",
     description: "Je suis un développeur frontend passionné, spécialisé dans la création d’interfaces web modernes, fluides et réactives. J’accorde une grande importance à l’expérience utilisateur en concevant des designs qui allient esthétisme et performance.",
-    icon: <LetterText className="text-red-500 scale-150" />,
+    icon: <Palette className="text-red-500 scale-150" />,
   },
   {
     id: 2,
     title: "Développeur Backend",
     description: "Je maîtrise les fondamentaux du développement backend, avec un focus sur la conception de systèmes robustes, fiables et scalables. J’optimise la gestion des données pour assurer performance et sécurité tout en garantissant une logique métier claire et évolutive.",
-    icon: <CalendarSync className="text-red-500 scale-150" />,
+    icon: <DatabaseBackup  className="text-red-500 scale-150" />,
   },
   {
     id: 3,
@@ -99,7 +100,7 @@ const Experiences = () => {
           >
             <div className="mr-4 md:mr-6 text-3xl md:text-4xl">{experience.icon}</div>
             <div className="flex flex-col text-left font-poppins">
-              <h2 className="text-xl font-bold mb-1">{experience.title}</h2>
+              <h2 className="text-xl font-bold mb-2">{experience.title}</h2>
               <p className="text-sm md:text-base text-justify leading-relaxed hyphens-auto">{experience.description}</p>
             </div>
           </motion.div>
