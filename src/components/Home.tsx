@@ -8,9 +8,17 @@ const Home = () => {
   id="Home"
   className="flex flex-col-reverse md:flex-row justify-center md:justify-between items-center my-10 md:my-32 opacity-0 animate-fadeIn">
       <div className="flex flex-col">
-        <h1 className="text-4xl md:text-6xl font-bold text-center md:text-left mt-4 md:mt-0">
-          Salut !, <br /> je m'appelle {" "} <span className="text-red-500">IsraelHangy</span>
-        </h1>
+      <h1 className="text-4xl md:text-6xl font-bold text-center md:text-left mt-4 md:mt-0">
+   
+        <span className="text-outline">Salut !,</span>
+        <br />
+        <span>Je m'appelle{" "}</span>
+        
+        <span className="bg-gradient-moving bg-300 bg-clip-text text-transparent animate-gradient-move">
+          IsraelHangy
+        </span>
+
+      </h1>
         <p className="mt-4 md:mt-8 text-md text-center md:text-left md:text-xl font-poppins w-full md:max-w-xl">
           Je suis un développeur web full stack avec une forte appétence sur le UI/UX Design.
           Passionné par la création d'applications web modernes et performantes.

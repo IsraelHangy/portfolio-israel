@@ -68,13 +68,13 @@ const Contact = () => {
       initial="initial"
       whileInView="animate"
       viewport={{ once: true, amount: 0.3 }}
-      variants={fadeInUp}  // transition définie ici, pas besoin de mettre 'transition' ici
+      variants={fadeInUp}
     >
       <section id="form">
         <h2 className="lg:text-5xl text-2xl font-bold mb-4 text-center">
           Envoyez un message !
         </h2>
-        <p className="text-center text-gray-300 mb-12">
+        <p className="text-center text-gray-300 font-light mb-8 md:mb-12 text-sm md:text-base">
           Vous avez une question, une proposition, un commentaire ou vous
           souhaitez simplement <br />
           dire bonjour ? Allez-y
@@ -87,28 +87,28 @@ const Contact = () => {
         >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
             <div>
-              <label className="block text-gray-200 text-lg font-semibold mb-2">
+              <label className="block text-gray-200 text-base md:text-xl font-semibold mb-2">
                 VOTRE NOM
               </label>
               <input
                 name="name"
                 type="text"
                 placeholder="Entrez votre nom"
-                className="w-full font-semibold py-3 text-white text-lg bg-base-300 border-b border-white/50 focus:border-red-700 transition duration-300 ease-in-out outline-none focus:scale-[1.02]"
+                className="w-full font-normal md:font-semibold py-3  text-white text-base md:text-xl bg-base-300 border-b border-white/50 focus:border-red-700 transition duration-300 ease-in-out outline-none focus:scale-[1.02]"
                 value={formData.name}
                 onChange={handleChange}
                 required
               />
             </div>
             <div>
-              <label className="block text-gray-200 text-lg font-semibold mb-2">
+              <label className="block text-gray-200 text-base md:text-xl font-semibold mb-2">
                 VOTRE EMAIL
               </label>
               <input
                 name="email"
                 type="email"
                 placeholder="Entrez votre email"
-                className="w-full font-semibold py-3 text-white text-lg bg-base-300 border-b border-white/50 focus:border-red-700 transition duration-300 ease-in-out outline-none focus:scale-[1.02]"
+                className="w-full font-normal md:font-semibold py-3 text-white text-base md:text-xl bg-base-300 border-b border-white/50 focus:border-red-700 transition duration-300 ease-in-out outline-none focus:scale-[1.02]"
                 value={formData.email}
                 onChange={handleChange}
                 required
@@ -116,14 +116,14 @@ const Contact = () => {
             </div>
           </div>
           <div className="mb-8">
-            <label className="block text-gray-200 text-lg font-semibold mb-2">
+            <label className="block text-gray-200 text-base md:text-xl font-semibold mb-2">
               VOTRE MESSAGE
             </label>
             <textarea
               name="message"
               placeholder="Écrivez votre message"
               rows={4}
-              className="w-full font-semibold py-3 text-white text-lg bg-base-300 border-b border-white/50 focus:border-red-700 transition duration-300 ease-in-out outline-none focus:scale-[1.02] resize-none"
+              className="w-full font-normal md:font-semibold py-3 text-white text-base md:text-xl bg-base-300 border-b border-white/50 focus:border-red-700 transition duration-300 ease-in-out outline-none focus:scale-[1.02] resize-none"
               value={formData.message}
               onChange={handleChange}
               required
@@ -131,7 +131,7 @@ const Contact = () => {
           </div>
           <button
             type="submit"
-            className="w-full bg-red-700 hover:bg-red-900 transition duration-300 ease-in-out font-bold text-white py-3"
+            className="w-full bg-red-700 hover:bg-red-900 transition duration-300 ease-in-out font-semibold md:font-bold text-white py-3"
           >
             ENVOYEZ VOTRE MESSAGE
           </button>

@@ -78,7 +78,7 @@ const Projects = () => {
   return (
     <div className="my-10" id="Projects">
       <div className="mt-20 md:mt-0 mb-8">
-        <Title title="Mes Projets & Réalisations" />
+        <Title title="Mes Oeuvres" />
       </div>
       <div className="grid md:grid-cols-3 gap-4">
         {projects.map((project) => (

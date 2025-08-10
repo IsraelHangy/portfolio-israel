@@ -1,5 +1,6 @@
 import Title from "./Title"
 import { motion } from "framer-motion"
+import { CalendarSync, LetterText, Paintbrush } from "lucide-react";
 
 import imgCSS from "../assets/techno/css.png";
 import imgJS from "../assets/techno/js.png";
@@ -10,9 +11,6 @@ import imgNODE from "../assets/techno/node-js.png";
 import imgTYPE from "../assets/techno/typescript.svg";
 import imgTAILWIND from "../assets/techno/tailwind.png";
 import imgADONIS from "../assets/techno/adonis.js.svg";
-
-import snel from "../assets/companies/snel.png";
-import academy from "../assets/companies/academy.png";
 
 const skills = [
   { id: 1, name: "HTML", image: imgHTML },
@@ -27,42 +25,35 @@ const skills = [
 ];
 
 const experiences = [
-  {
+
+    {
     id: 1,
-    role: "Developper Intern",
-    company: "SNEL",
-    period: "Aug 2023 - Sept 2023",
-    description: [
-      "Analyse des besoins et des exigences en Entreprise.",
-      "Modélisation d'une base des données avec Oracle 10g.",
-      "Conception et gestion d'une base de données sur SQL Server avec Oracle",
-      "Conception et développement de l'appli desktop pour la gestion du parc Informatique avec WINDEV.",
-    ],
-    image: snel,
+    title: "Développeur Frontend",
+    description: "Je suis un développeur frontend passionné, spécialisé dans la création d’interfaces web modernes, fluides et réactives. J’accorde une grande importance à l’expérience utilisateur en concevant des designs qui allient esthétisme et performance.",
+    icon: <LetterText className="text-red-500 scale-150" />,
   },
   {
     id: 2,
-    role: "Fullstack Developer",
-    company: "Kadea Academy",
-    period: "June 2024 - April 2025",
-    description: [
-      "Création des interfaces utilisateur web statiques et responsives",
-      "Création des interfaces utilisateur web dynamiques et responsives",
-      "Modélisation et Conception d'une base de données avec PostgreSQL",
-      "Déploiement d’une application web",
-      "Gestion de projets et Gestion des taches avec Git et GitHub",
-      "Maquetter une application avec Figma",
-      "Réaliser une interface utilisateur avec une solution de gestion de contenu ou e-commerce avec WordPress",
-    ],
-    image: academy,
+    title: "Développeur Backend",
+    description: "Je maîtrise les fondamentaux du développement backend, avec un focus sur la conception de systèmes robustes, fiables et scalables. J’optimise la gestion des données pour assurer performance et sécurité tout en garantissant une logique métier claire et évolutive.",
+    icon: <CalendarSync className="text-red-500 scale-150" />,
   },
+  {
+    id: 3,
+    title: "Passionné par l'UI/UX",
+    description: "je m’efforce de concevoir des interfaces utilisateurs à la fois intuitives, esthétiques et fonctionnelles. Mon objectif est de créer des expériences qui captivent l’utilisateur dès le premier regard tout en assurant une navigation fluide et naturelle, grâce à une forte maîtrise des principes visuels et ergonomiques.",
+    icon: <Paintbrush className="text-red-500 scale-150" />,
+  },
+  
 ];
+
+
 
 const Experiences = () => {
   return (
     <div className="md:pb-20" id="Experiences">
       <div className="md:mt-10 mt-5 mb-8">
-        <Title title="Expériences & Technologies" />
+        <Title title="MES COMPÉTENCES" />
       </div>
 
       <div className="flex flex-col-reverse md:flex-row">
@@ -92,41 +83,29 @@ const Experiences = () => {
           ))}
         </div>
 
-        <div className="md:ml-4 flex flex-col space-y-4 md:w-2/3">
-          {experiences.map((experience, index) => (
-            <motion.div
-              key={experience.id}
-              className="flex flex-col bg-base-200 p-5 md:p-4 rounded-xl shadow-lg"
-              initial="initial"
-              whileInView="whileInView"
-              viewport={{ once: true, amount: 0.5 }}
-              transition={{ delay: index * 0.3, duration: 0.7, ease: "easeOut" }}
-              variants={{
-                initial: { opacity: 0, y: 40 },
-                whileInView: { opacity: 1, y: 0 },
-              }}
-            >
-              <div className="flex items-center">
-                <img
-                  src={experience.image}
-                  alt={experience.company}
-                  className="object-cover h-10 w-10"
-                />
-                <div className="ml-4">
-                  <h1 className="text-xl text-red-500 font-bold">
-                    {experience.role} , {experience.company}
-                  </h1>
-                  <span className="text-sm">{experience.period}</span>
-                </div>
-              </div>
-              <ul className="list-disc ml-16 mt-2 font-poppins">
-                {experience.description.map((desc, idx) => (
-                  <li key={idx}>{desc}</li>
-                ))}
-              </ul>
-            </motion.div>
-          ))}
-        </div>
+       <div className="md:ml-4 flex flex-col space-y-4 md:w-2/3">
+        {experiences.map((experience, index) => (
+          <motion.div
+            key={experience.id}
+            className="flex bg-base-200 p-5 md:p-4 rounded-xl shadow-lg items-center"
+            initial="initial"
+            whileInView="whileInView"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ delay: index * 0.3, duration: 0.7, ease: "easeOut" }}
+            variants={{
+              initial: { opacity: 0, y: 40 },
+              whileInView: { opacity: 1, y: 0 },
+            }}
+          >
+            <div className="mr-4 md:mr-6 text-3xl md:text-4xl">{experience.icon}</div>
+            <div className="flex flex-col text-left font-poppins">
+              <h2 className="text-xl font-bold mb-1">{experience.title}</h2>
+              <p className="text-sm md:text-base text-justify leading-relaxed hyphens-auto">{experience.description}</p>
+            </div>
+          </motion.div>
+        ))}
+      </div>
+
       </div>
     </div>
   );

@@ -1,19 +1,23 @@
 import { motion, easeOut } from "framer-motion";
-import { Container, Facebook, Github, Linkedin, Twitter } from "lucide-react";
+import { Container, Facebook, Github, Linkedin, Twitter, ArrowUp } from "lucide-react";
 
 const footerVariants = {
   hidden: { opacity: 0, y: 50 },
   visible: { 
     opacity: 1, 
     y: 0, 
-    transition: { duration: 0.8, ease: easeOut }  // <-- ici
+    transition: { duration: 0.8, ease: easeOut }
   },
 };
 
 const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <motion.footer
-      className="footer footer-center px-5 pb-5 py-10"
+      className="footer footer-center px-5 pb-5 md:my-10 my-7  relative"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
@@ -45,6 +49,15 @@ const Footer = () => {
           </a>
         </div>
       </nav>
+
+      {/* Bouton flèche remonter */}
+      <button
+        onClick={scrollToTop}
+        aria-label="Remonter en haut"
+        className="absolute right-3 bottom-0 md:right-14 md:bottom-14 flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-red-700 text-white shadow-lg hover:bg-red-900 transition"
+      >
+        <ArrowUp className="w-5 h-5 md:w-6 md:h-6" />
+      </button>
     </motion.footer>
   );
 };
