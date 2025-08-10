@@ -1,9 +1,12 @@
 import { FileText, Mail } from "lucide-react"
 import image from "../assets/imageIsrael.webp";
+import cvPDF from "../assets/CV_Israel.pdf"; 
 
 const Home = () => {
   return (
-    <div id="Home" className="flex flex-col-reverse md:flex-row justify-center md:justify-between  items-center my-10 md:my-32">
+   <div
+  id="Home"
+  className="flex flex-col-reverse md:flex-row justify-center md:justify-between items-center my-10 md:my-32 opacity-0 animate-fadeIn">
       <div className="flex flex-col">
         <h1 className="text-4xl md:text-6xl font-bold text-center md:text-left mt-4 md:mt-0">
           Salut !, <br /> je m'appelle {" "} <span className="text-red-500">IsraelHangy</span>
@@ -17,20 +20,33 @@ const Home = () => {
 
 
         <div className="flex justify-center md:justify-start space-x-4 md:mt-8 mt-6">
-          <a href="#" className="btn btn-lg bg-red-500 hover:bg-red-800 text-black rounded-lg md:w-fit">
+          <a href="#Contact" className="btn btn-lg bg-red-500 hover:bg-red-800 text-black rounded-lg md:w-fit">
             <Mail className="w-5 h-5" />
             Contactez-moi
           </a>
-          <a href="#" className="btn btn-lg bg-red-500 hover:bg-red-800 text-black rounded-lg md:w-fit">
+         <a
+            href={cvPDF}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-lg bg-red-500 hover:bg-red-800 text-black rounded-lg md:w-fit flex items-center space-x-2"
+          >
             <FileText className="w-5 h-5" />
-            Mon CV
+            <span>Mon CV</span>
           </a>
+
         </div>
       </div>
 
       <div className="flex justify-center items-center">
-        <img src={image} alt="Photo de profil" className="w-[26rem] h-[26rem]  rounded-xl object-cover" />
-      </div>
+      <img
+      src={image}
+      alt="Photo de profil"
+      className="w-[26rem] h-[26rem] rounded-xl object-cover opacity-0 animate-fadeIn"
+      loading="lazy"
+      />
+
+    </div>
+
     </div>
   )
 }

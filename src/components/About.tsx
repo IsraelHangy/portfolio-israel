@@ -1,12 +1,13 @@
 import Title from "./Title"
 import image from "../assets/imageIsraelToge.webp";
 import { CalendarSync, LetterText, Paintbrush } from "lucide-react";
+import { motion } from "framer-motion";
 
 const aboutSections = [
   {
     id: 1,
     title: "Développeur Frontend",
-    description: "Je suis un développeur frontend avec une bonne expérience et spécialisé dans la création d'intrterfaces web modernes, fluides et réactives.",
+    description: "Je suis un développeur frontend avec une bonne expérience et spécialisé dans la création d'interfaces web modernes, fluides et réactives.",
     icon: <LetterText className="text-red-500 scale-150" />,
   },
   {
@@ -18,43 +19,56 @@ const aboutSections = [
   {
     id: 3,
     title: "Passionné par l'UI/UX",
-    description: "Créer des interfaces utilisateurs à la fois intuitives, attrayantes et fonctionnelles est ma priorité.Avec une maitrise visuelle forte",
+    description: "Créer des interfaces utilisateurs à la fois intuitives, attrayantes et fonctionnelles est ma priorité. Avec une maîtrise visuelle forte.",
     icon: <Paintbrush className="text-red-500 scale-150" />,
   },
 ];
 
 const About = () => {
   return (
-    <div className="bg-base-300 p-10 md:pb-20 " id="About">
-      <div className=" mb-8 font-poppins">
+    <div className="bg-base-300 p-10 md:pb-20" id="About">
+      <div className="mb-8">
         <Title title="À PROPOS DE MOI" />
       </div>
-      
-      <div className=" flex justify-center items-center">
-        <div className="hidden md:block ">
-          <img src={image} alt="Photo de profil" className="w-[29rem] h-[29rem] md: mr-20  rounded-xl object-cover" />
-        </div>
+
+      <div className="flex justify-center items-center">
+       <motion.div
+        className="hidden md:block"
+        initial={{ opacity: 0, scale: 0.95 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.5 }} 
+      >
+        <img
+          src={image}
+          alt="Photo de profil"
+          className="w-[29rem] h-[29rem] mr-20 rounded-xl object-cover"
+        />
+      </motion.div>
+
+
+
         <div className="ml-4 space-y-4 md:mr-20">
-          {aboutSections.map((section) => (
-            <div key={section.id} className=" flex flex-col md:flex-row items-center bg-base-100 p-5 rounded-xl md:w-96 shadow-xl">
-              <div className="mb-3 md:mb-2">
-                {section.icon}
+          {aboutSections.map((section, index) => (
+            <motion.div
+              key={section.id}
+              className="flex flex-col md:flex-row items-center bg-base-100 p-5 rounded-xl md:w-96 shadow-xl"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
+              viewport={{ once: true }}
+            >
+              <div className="mb-3 md:mb-2">{section.icon}</div>
+              <div className="md:ml-4 text-center md:text-left font-poppins">
+                <h2 className="text-xl font-bold mb-1">{section.title}</h2>
+                <p className="text-sm font-poppins">{section.description}</p>
               </div>
-              <div className="md:ml-4 text-center md:text-left font-poppins ">
-                <h2 className="text-xl font-bold mb-1">
-                  {section.title}
-                </h2>
-                <p className="text-sm font-poppins">
-                  {section.description}
-                </p>
-              </div>
-            </div>
-          ))
-          }
+            </motion.div>
+          ))}
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default About
+export default About;
