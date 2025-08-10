@@ -60,7 +60,7 @@ const projects = [
   {
     id: 6,
     title: 'Maquettes Figma',
-    description: 'Création de  maquettes interactives sous Figma, présentant des interfaces modernes et cohérentes. Travail sur la mise en page, la palette de couleurs et l’expérience utilisateur pour offrir un design clair et attrayant pour les clients.',
+    description: 'Création de  maquettes interactives sous Figma, présentant des interfaces modernes et cohérentes. Travail sur la mise en page, la palette de couleurs et l’expérience utilisateur pour offrir un design clair et attrayant.',
     technologies: ['Figma', 'Responsive', 'UI/UX', 'Design', 'Prototypage'],
     demoLink: 'https://www.figma.com/design/aya1EheBRTHxcXb11ixzrv/Mes-Projets---Realisations?node-id=0-1&t=HbnSuFcUoaBdFDLh-1',
     repoLink: 'https://www.figma.com/design/aya1EheBRTHxcXb11ixzrv/Mes-Projets---Realisations?node-id=0-1&t=HbnSuFcUoaBdFDLh-1',
