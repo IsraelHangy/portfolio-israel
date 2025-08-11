@@ -1,7 +1,6 @@
-import Title from "./Title"
-import { motion } from "framer-motion"
+import Title from "./Title";
+import { motion } from "framer-motion";
 import { DatabaseBackup, Paintbrush, Palette } from "lucide-react";
-
 
 import imgCSS from "../assets/techno/css.png";
 import imgJS from "../assets/techno/js.png";
@@ -26,29 +25,28 @@ const skills = [
 ];
 
 const experiences = [
-
   {
     id: 1,
     title: "Développeur Frontend",
-    description: "Je suis un développeur frontend passionné, spécialisé dans la création d’interfaces web modernes, fluides et réactives. J’accorde une grande importance à l’expérience utilisateur en concevant des designs qui allient esthétisme et performance.",
+    description:
+      "Je suis un développeur frontend passionné, spécialisé dans la création d’interfaces web modernes, fluides et réactives. J’accorde une grande importance à l’expérience utilisateur en concevant des designs qui allient esthétisme et performance.",
     icon: <Palette className="text-red-500 scale-150" />,
   },
   {
     id: 2,
     title: "Développeur Backend",
-    description: "Je maîtrise les fondamentaux du développement backend, avec un focus sur la conception de systèmes robustes, fiables et scalables. J’optimise la gestion des données pour assurer performance et sécurité tout en garantissant une logique métier claire et évolutive.",
+    description:
+      "Je maîtrise les fondamentaux du développement backend, avec un focus sur la conception de systèmes robustes, fiables et scalables. J’optimise la gestion des données pour assurer performance et sécurité tout en garantissant une logique métier claire et évolutive.",
     icon: <DatabaseBackup className="text-red-500 scale-150" />,
   },
   {
     id: 3,
     title: "Passionné par l'UI/UX",
-    description: "je m’efforce de concevoir des interfaces utilisateurs à la fois intuitives, esthétiques et fonctionnelles. Mon objectif est de créer des expériences qui captivent l’utilisateur dès le premier regard tout en assurant une navigation fluide et naturelle, grâce à une forte maîtrise des principes visuels et ergonomiques.",
+    description:
+      "je m’efforce de concevoir des interfaces utilisateurs à la fois intuitives, esthétiques et fonctionnelles. Mon objectif est de créer des expériences qui captivent l’utilisateur dès le premier regard tout en assurant une navigation fluide et naturelle, grâce à une forte maîtrise des principes visuels et ergonomiques.",
     icon: <Paintbrush className="text-red-500 scale-150" />,
   },
-
 ];
-
-
 
 const Experiences = () => {
   return (
@@ -58,7 +56,13 @@ const Experiences = () => {
       </div>
 
       <div className="flex flex-col-reverse md:flex-row">
+        {/* Bloc des skills */}
         <div className="flex flex-wrap gap-4 md:w-1/3 mt-4 md:mt-0">
+
+          <p className="text-center font-normal text-xl w-full my-4 block md:hidden">
+            Voici quelques technologies avec lesquelles j'ai travaillé <br /> récemment
+          </p>
+
           {skills.map((skill, index) => (
             <motion.div
               key={skill.id}
@@ -66,7 +70,11 @@ const Experiences = () => {
               initial="initial"
               whileInView="whileInView"
               viewport={{ once: true, amount: 0.5 }}
-              transition={{ delay: index * 0.1, duration: 0.6, ease: "easeOut" }}
+              transition={{
+                delay: index * 0.1,
+                duration: 0.6,
+                ease: "easeOut",
+              }}
               variants={{
                 initial: { opacity: 0, scale: 0.8 },
                 whileInView: { opacity: 1, scale: 1 },
@@ -84,6 +92,7 @@ const Experiences = () => {
           ))}
         </div>
 
+        {/* Bloc des expériences */}
         <div className="md:ml-4 flex flex-col space-y-4 md:w-2/3">
           {experiences.map((experience, index) => (
             <motion.div
@@ -92,7 +101,11 @@ const Experiences = () => {
               initial="initial"
               whileInView="whileInView"
               viewport={{ once: true, amount: 0.5 }}
-              transition={{ delay: index * 0.3, duration: 0.7, ease: "easeOut" }}
+              transition={{
+                delay: index * 0.3,
+                duration: 0.7,
+                ease: "easeOut",
+              }}
               variants={{
                 initial: { opacity: 0, y: 40 },
                 whileInView: { opacity: 1, y: 0 },
@@ -111,11 +124,8 @@ const Experiences = () => {
                 </p>
               </div>
             </motion.div>
-
-
           ))}
         </div>
-
       </div>
     </div>
   );
