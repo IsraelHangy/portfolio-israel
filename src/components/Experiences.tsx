@@ -27,7 +27,7 @@ const skills = [
 
 const experiences = [
 
-    {
+  {
     id: 1,
     title: "Développeur Frontend",
     description: "Je suis un développeur frontend passionné, spécialisé dans la création d’interfaces web modernes, fluides et réactives. J’accorde une grande importance à l’expérience utilisateur en concevant des designs qui allient esthétisme et performance.",
@@ -37,7 +37,7 @@ const experiences = [
     id: 2,
     title: "Développeur Backend",
     description: "Je maîtrise les fondamentaux du développement backend, avec un focus sur la conception de systèmes robustes, fiables et scalables. J’optimise la gestion des données pour assurer performance et sécurité tout en garantissant une logique métier claire et évolutive.",
-    icon: <DatabaseBackup  className="text-red-500 scale-150" />,
+    icon: <DatabaseBackup className="text-red-500 scale-150" />,
   },
   {
     id: 3,
@@ -45,7 +45,7 @@ const experiences = [
     description: "je m’efforce de concevoir des interfaces utilisateurs à la fois intuitives, esthétiques et fonctionnelles. Mon objectif est de créer des expériences qui captivent l’utilisateur dès le premier regard tout en assurant une navigation fluide et naturelle, grâce à une forte maîtrise des principes visuels et ergonomiques.",
     icon: <Paintbrush className="text-red-500 scale-150" />,
   },
-  
+
 ];
 
 
@@ -84,28 +84,37 @@ const Experiences = () => {
           ))}
         </div>
 
-       <div className="md:ml-4 flex flex-col space-y-4 md:w-2/3">
-        {experiences.map((experience, index) => (
-          <motion.div
-            key={experience.id}
-            className="flex bg-base-200 p-5 md:p-4 rounded-xl shadow-lg items-center"
-            initial="initial"
-            whileInView="whileInView"
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ delay: index * 0.3, duration: 0.7, ease: "easeOut" }}
-            variants={{
-              initial: { opacity: 0, y: 40 },
-              whileInView: { opacity: 1, y: 0 },
-            }}
-          >
-            <div className="mr-4 md:mr-6 text-3xl md:text-4xl">{experience.icon}</div>
-            <div className="flex flex-col text-left font-poppins">
-              <h2 className="text-xl font-bold mb-2">{experience.title}</h2>
-              <p className="text-sm md:text-base text-justify leading-relaxed hyphens-auto">{experience.description}</p>
-            </div>
-          </motion.div>
-        ))}
-      </div>
+        <div className="md:ml-4 flex flex-col space-y-4 md:w-2/3">
+          {experiences.map((experience, index) => (
+            <motion.div
+              key={experience.id}
+              className="flex flex-col md:flex-row bg-base-200 p-5 md:p-4 rounded-xl shadow-lg items-center md:items-center md:text-left text-center"
+              initial="initial"
+              whileInView="whileInView"
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ delay: index * 0.3, duration: 0.7, ease: "easeOut" }}
+              variants={{
+                initial: { opacity: 0, y: 40 },
+                whileInView: { opacity: 1, y: 0 },
+              }}
+            >
+              {/* Icône */}
+              <div className="mb-3 md:mb-0 md:mr-6 text-3xl md:text-4xl">
+                {experience.icon}
+              </div>
+
+              {/* Texte */}
+              <div className="flex flex-col font-poppins">
+                <h2 className="text-xl font-bold mb-2">{experience.title}</h2>
+                <p className="text-sm md:text-base text-justify md:text-left leading-relaxed">
+                  {experience.description}
+                </p>
+              </div>
+            </motion.div>
+
+
+          ))}
+        </div>
 
       </div>
     </div>
