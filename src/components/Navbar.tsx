@@ -3,9 +3,9 @@ import { Container } from "lucide-react"
 const Navbar = () => {
     return (
         <div className="md:fixed md:top-0 md:left-0 md:w-full z-50 bg-base-100">
-            <div className="max-w-7xl mx-auto flex justify-center md:justify-between items-center p-4">
+            <div className="max-w-7xl mx-auto flex justify-center md:justify-between items-center p-2 md:p-4">
                 <a href="#"
-                    className="flex items-center font-bold text-2xl pt-2">
+                    className="flex items-center font-bold text-2xl md:pt-2">
                     <Container className="mr-2" />
                     BAKI
                     <span className="text-red-500">DEV</span>

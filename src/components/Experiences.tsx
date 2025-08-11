@@ -58,7 +58,7 @@ const Experiences = () => {
       <div className="flex flex-col-reverse md:flex-row">
         {/* Bloc des skills */}
         <div className="flex flex-wrap gap-4 md:w-1/3 mt-4 md:mt-0">
-          <p className="text-center font-normal text-xl w-full my-4 block md:hidden">
+          <p className="text-center font-medium text-xl w-full my-4 block md:hidden">
             Voici quelques technologies avec lesquelles j'ai travaillé <br /> récemment
           </p>
 
