@@ -12,8 +12,8 @@ const Home = () => {
    
         <span className="text-outline">Salut !,</span>
         <br />
-        <span>Je m'appelle{" "}</span><br />
-        
+        <span>Je m'appelle{" "}</span>
+        <br className="block md:hidden" /> 
         <span className="bg-gradient-moving bg-300 bg-clip-text text-transparent animate-gradient-move">
           Israel Hangy
         </span>
@@ -49,7 +49,7 @@ const Home = () => {
       <img
       src={image}
       alt="Photo de profil"
-      className="w-[26rem] h-[26rem] rounded-xl object-cover opacity-0 animate-fadeIn"
+      className="w-[26rem] h-[26rem] md:w-[32rem] md:h-[32rem]  rounded-xl object-cover opacity-0 animate-fadeIn"
       loading="lazy"
       />
 

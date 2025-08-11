@@ -42,7 +42,7 @@ const About = () => {
         <img
           src={image}
           alt="Photo de profil"
-          className="w-[29rem] h-[29rem] mr-20 rounded-xl object-cover"
+          className="w-[32rem] h-[32rem] mr-20 rounded-xl object-cover"
         />
       </motion.div>
 
