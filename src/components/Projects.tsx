@@ -101,7 +101,7 @@ const Projects = () => {
             </div>
             <div className="flex flex-wrap gap-2 my-3">
               {project.technologies.map((tech, idx) => (
-                <span key={idx} className="badge bg-red-600 md:bg-red-700 badge-sm">
+                <span key={idx} className="badge bg-red-500 md:bg-red-700 badge-sm">
                   {tech}
                 </span>
               ))}
@@ -111,7 +111,7 @@ const Projects = () => {
                 href={project.demoLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-lg bg-red-600 md:bg-red-700 hover:bg-red-900 active:scale-95 transition-transform duration-150 w-2/3 text-white"
+                className="btn btn-lg bg-red-500 md:bg-red-700 hover:bg-red-900 active:scale-95 transition-transform duration-150 w-2/3 text-white"
               >
                 Visitez le site <Telescope className="w-4 ml-2" />
               </a>
