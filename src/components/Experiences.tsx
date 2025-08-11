@@ -43,7 +43,7 @@ const experiences = [
     id: 3,
     title: "Passionné par l'UI/UX",
     description:
-      "je m’efforce de concevoir des interfaces utilisateurs à la fois intuitives, esthétiques et fonctionnelles. Mon objectif est de créer des expériences qui captivent l’utilisateur dès le premier regard tout en assurant une navigation fluide et naturelle, grâce à une forte maîtrise des principes visuels et ergonomiques.",
+      "Je m’efforce de concevoir des interfaces utilisateurs à la fois intuitives, esthétiques et fonctionnelles. Mon objectif est de créer des expériences qui captivent l’utilisateur dès le premier regard tout en assurant une navigation fluide et naturelle, grâce à une forte maîtrise des principes visuels et ergonomiques.",
     icon: <Paintbrush className="text-red-500 scale-150" />,
   },
 ];
@@ -58,7 +58,6 @@ const Experiences = () => {
       <div className="flex flex-col-reverse md:flex-row">
         {/* Bloc des skills */}
         <div className="flex flex-wrap gap-4 md:w-1/3 mt-4 md:mt-0">
-
           <p className="text-center font-normal text-xl w-full my-4 block md:hidden">
             Voici quelques technologies avec lesquelles j'ai travaillé <br /> récemment
           </p>
@@ -80,7 +79,7 @@ const Experiences = () => {
                 whileInView: { opacity: 1, scale: 1 },
               }}
             >
-              <div className="w-24 h-24 p-2 rounded-full justify-center items-center border-2 border-red-500">
+              <div className="w-24 h-24 p-2 rounded-full flex justify-center items-center border-2 border-red-500">
                 <img
                   src={skill.image}
                   alt={skill.name}
@@ -97,31 +96,19 @@ const Experiences = () => {
           {experiences.map((experience, index) => (
             <motion.div
               key={experience.id}
-              className="flex flex-col md:flex-row bg-base-200 p-5 md:p-4 rounded-xl shadow-lg items-center md:items-center md:text-left text-center"
-              initial="initial"
-              whileInView="whileInView"
-              viewport={{ once: true, amount: 0.5 }}
-              transition={{
-                delay: index * 0.3,
-                duration: 0.7,
-                ease: "easeOut",
-              }}
-              variants={{
-                initial: { opacity: 0, y: 40 },
-                whileInView: { opacity: 1, y: 0 },
-              }}
+              className="flex flex-col md:flex-row items-center bg-base-200 p-5 rounded-xl shadow-xl"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
+              viewport={{ once: true }}
             >
               {/* Icône */}
-              <div className="mb-3 md:mb-0 md:mr-6 text-3xl md:text-4xl">
-                {experience.icon}
-              </div>
+              <div className="mb-3 md:mb-2">{experience.icon}</div>
 
               {/* Texte */}
-              <div className="flex flex-col font-poppins">
-                <h2 className="text-xl font-bold mb-2">{experience.title}</h2>
-                <p className="text-sm md:text-base text-justify md:text-left leading-relaxed">
-                  {experience.description}
-                </p>
+              <div className="md:ml-4 text-center md:text-left font-poppins">
+                <h2 className="text-xl font-bold mb-1">{experience.title}</h2>
+                <p className="text-sm font-poppins">{experience.description}</p>
               </div>
             </motion.div>
           ))}
