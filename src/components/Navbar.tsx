@@ -1,15 +1,24 @@
-import { Container } from "lucide-react"
+import {  Flame} from "lucide-react"
 
 const Navbar = () => {
     return (
         <div className="md:fixed md:top-0 md:left-0 md:w-full z-50 bg-base-100">
             <div className="max-w-7xl mx-auto flex justify-center md:justify-between items-center p-2 md:p-4">
-                <a href="#"
-                    className="flex items-center font-bold text-2xl md:pt-2">
-                    <Container className="mr-2" />
-                    BAKI
-                    <span className="text-red-500">DEV</span>
-                </a>
+             <a
+                href="#"
+                className="flex items-center font-bold text-2xl md:pt-2"
+                >
+                <Flame
+                    className="mr-2"
+                    size={30} 
+                    strokeWidth={2} 
+                    fill="white" 
+                    color="white" 
+                />
+                BAKI
+                <span className="text-red-500">DEV</span>
+            </a>
+
                 <ul className="hidden md:flex space-x-3 font-poppins">
                     <li>
                         <a href="#Home" className="btn btn-lg btn-ghost text-xl">Accueil</a>

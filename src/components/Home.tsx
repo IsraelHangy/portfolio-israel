@@ -12,10 +12,10 @@ const Home = () => {
    
         <span className="text-outline">Salut !,</span>
         <br />
-        <span>Je m'appelle{" "}</span>
+        <span>Je m'appelle{" "}</span><br />
         
         <span className="bg-gradient-moving bg-300 bg-clip-text text-transparent animate-gradient-move">
-          IsraelHangy
+          Israel Hangy
         </span>
 
       </h1>

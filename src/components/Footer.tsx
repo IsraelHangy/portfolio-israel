@@ -1,5 +1,5 @@
 import { motion, easeOut } from "framer-motion";
-import { Container, Facebook, Github, Linkedin, Twitter, ArrowUp } from "lucide-react";
+import { Flame, Facebook, Github, Linkedin, Twitter, ArrowUp } from "lucide-react";
 
 const footerVariants = {
   hidden: { opacity: 0, y: 50 },
@@ -17,22 +17,29 @@ const Footer = () => {
 
   return (
     <motion.footer
-      className="footer footer-center px-5 pb-5 md:my-10 my-7  relative"
+      className="footer footer-center px-5 pb-5 md:my-10 my-5  relative"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
       variants={footerVariants}
     >
-      <aside>
-        <Container className="w-8 h-8 md:w-10 md:h-10 " />
-        <p className="font-bold text-xl md:text-2xl">
-          BAKI
-          <span className="text-red-500">DEV</span>
-        </p>
-        <p className="font-poppins md:text-base text-xs">
-          Copyright © {new Date().getFullYear()} - Tous droits réservés
-        </p>
-      </aside>
+    <aside>
+      <Flame
+        size={30} 
+        strokeWidth={2}
+        fill="white" 
+        color="white" 
+      />
+      <p className="font-bold text-xl md:text-2xl">
+        BAKI
+        <span className="text-red-500">DEV</span>
+      </p>
+      <p className="font-poppins md:text-base text-xs">
+        Copyright © {new Date().getFullYear()} - Tous droits réservés
+      </p>
+    </aside>
+
+
       <nav>
         <div className="grid grid-flow-col gap-4">
           <a href="https://x.com/IsraelNgeve?t=RSze1kboTwadGK35AsIcjg&s=09" target="_blank" rel="noopener noreferrer">
