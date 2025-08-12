@@ -107,8 +107,8 @@ const Experiences = () => {
 
               {/* Texte */}
               <div className="md:ml-4 text-center md:text-left font-poppins">
-                <h2 className="text-xl font-bold mb-1">{experience.title}</h2>
-                <p className="text-sm font-poppins">{experience.description}</p>
+                <h2 className="text-xl font-extrabold mb-2">{experience.title}</h2>
+                <p className="text-sm md:text-lg font-poppins">{experience.description}</p>
               </div>
             </motion.div>
           ))}

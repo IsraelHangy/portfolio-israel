@@ -8,7 +8,7 @@
     id="Home"
     className="flex flex-col-reverse md:flex-row justify-center md:justify-between items-center my-10 md:my-32 opacity-0 animate-fadeIn">
         <div className="flex flex-col">
-        <h1 className="text-5xl md:text-8xl font-extrabold text-center md:text-left mt-4 md:mt-0">
+        <h1 className="text-5xl md:text-8xl font-extrabold leading-tight text-center md:text-left mt-4 md:mt-0">
     
           <span className="text-outline">Salut,</span>
           <br />

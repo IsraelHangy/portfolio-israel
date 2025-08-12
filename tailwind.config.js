@@ -7,9 +7,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-      poppins: ['Poppins', 'sans-serif'],
-      'big-hero': ['"Big Shoulders Display"', 'sans-serif'],
-    },
+        poppins: ['Poppins', 'sans-serif'],
+        'big-hero': ['"Big Shoulders Display"', 'sans-serif'],
+      },
 
       // Dégradé animé
       backgroundImage: {
@@ -35,10 +35,16 @@ module.exports = {
 
     function ({ addUtilities }) {
       const newUtilities = {
+        
         '.text-outline': {
           color: 'transparent',
-          '-webkit-text-stroke': '1.5px white',
-          'text-stroke': '1.5px red',
+          '-webkit-text-stroke': '1px white',
+        },
+      
+        '@screen md': {
+          '.text-outline': {
+            '-webkit-text-stroke': '1.5px white',
+          },
         },
       };
       addUtilities(newUtilities, ['responsive']);
