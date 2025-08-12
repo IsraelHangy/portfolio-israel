@@ -1,6 +1,6 @@
 import Title from "./Title"
 import image from "../assets/imageIsraelToge.webp";
-import { CalendarSync, LetterText, Paintbrush } from "lucide-react";
+import { LetterText } from "lucide-react";
 import { motion } from "framer-motion";
 
 const aboutSections = [
@@ -9,18 +9,6 @@ const aboutSections = [
     title: "Développeur Frontend",
     description: "Je suis un développeur frontend avec une bonne expérience et spécialisé dans la création d'interfaces web modernes, fluides et réactives.",
     icon: <LetterText className="text-red-500 scale-150" />,
-  },
-  {
-    id: 2,
-    title: "Développeur Backend",
-    description: "Je maîtrise les bases du développement backend axé sur la conception de systèmes robustes, la gestion efficace des données et la logique du métier claire et évolutive.",
-    icon: <CalendarSync className="text-red-500 scale-150" />,
-  },
-  {
-    id: 3,
-    title: "Passionné par l'UI/UX",
-    description: "Créer des interfaces utilisateurs à la fois intuitives, attrayantes et fonctionnelles est ma priorité. Avec une maîtrise visuelle forte.",
-    icon: <Paintbrush className="text-red-500 scale-150" />,
   },
 ];
 

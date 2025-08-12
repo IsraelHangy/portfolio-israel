@@ -7,8 +7,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        poppins: ['Poppins', 'sans-serif'],
-      },
+      poppins: ['Poppins', 'sans-serif'],
+      'big-hero': ['"Big Shoulders Display"', 'sans-serif'],
+    },
 
       // Dégradé animé
       backgroundImage: {
@@ -32,6 +33,16 @@ module.exports = {
   plugins: [
     require("daisyui"),
 
+    function ({ addUtilities }) {
+      const newUtilities = {
+        '.text-outline': {
+          color: 'transparent',
+          '-webkit-text-stroke': '1.5px white',
+          'text-stroke': '1.5px red',
+        },
+      };
+      addUtilities(newUtilities, ['responsive']);
+    }
   ],
   daisyui: {
     themes: [
