@@ -33,22 +33,6 @@ module.exports = {
   plugins: [
     require("daisyui"),
 
-    function ({ addUtilities }) {
-      const newUtilities = {
-        
-        '.text-outline': {
-          color: 'white',
-          '-webkit-text-stroke': '1px white',
-        },
-      
-        '@screen md': {
-          '.text-outline': {
-            '-webkit-text-stroke': '1.5px white',
-          },
-        },
-      };
-      addUtilities(newUtilities, ['responsive']);
-    }
   ],
   daisyui: {
     themes: [
