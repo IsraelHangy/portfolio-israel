@@ -37,7 +37,7 @@ module.exports = {
       const newUtilities = {
         
         '.text-outline': {
-          color: 'transparent',
+          color: 'white',
           '-webkit-text-stroke': '1px white',
         },
       
