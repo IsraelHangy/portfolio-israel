@@ -82,7 +82,7 @@ const Footer = () => {
       <button
         onClick={scrollToTop}
         aria-label="Remonter en haut"
-        className="absolute right-3 bottom-0 md:right-20 md:bottom-30 flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-red-5  00 text-white shadow-lg hover:bg-red-900 transition"
+        className="absolute right-3 bottom-0 md:right-20 md:bottom-30 flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-red-500 text-white shadow-lg hover:bg-red-900 transition"
       >
         <ArrowUp className="w-5 h-5 md:w-6 md:h-6" />
       </button>
