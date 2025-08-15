@@ -26,8 +26,7 @@ const Footer = () => {
       <div className="flex flex-col md:flex-row justify-between w-full items-center md:items-start gap-6 md:gap-0 text-center md:text-left">
         
         {/* Logo + Contact */}
-        <div className="flex flex-col items-center md:items-start ">
-          {/* Logo */}
+        <div className="flex flex-col items-center md:items-start">
           <div className="flex items-center pb-5">
             <Flame
               className="mr-2 w-[30px] h-[30px] md:w-[40px] md:h-[40px]"
@@ -35,13 +34,12 @@ const Footer = () => {
               fill="white"
               color="white"
             />
-            <p className="font-extrabold text-xl md:text-2xl" style={{ fontWeight: 800 }}>
+            <p className="font-poppins font-extrabold text-xl md:text-2xl">
               BAKI<span className="text-red-500 pr-5">DEV</span>
             </p>
           </div>
 
-          {/* Contact */}
-          <p className="font-extrabold text-lg md:text-2xl" style={{ fontWeight: 800 }}>
+          <p className="font-poppins font-extrabold text-lg md:text-2xl">
             CONTACTEZ-MOI
           </p>
           <div className="flex flex-col md:pt-2 gap-1">
@@ -52,7 +50,7 @@ const Footer = () => {
 
         {/* Suivez-moi */}
         <div className="flex flex-col items-center md:items-end gap-1 md:pt-10">
-          <p className="font-extrabold text-lg md:text-2xl" style={{ fontWeight: 800 }}>
+          <p className="font-poppins font-extrabold text-lg md:text-2xl">
             SUIVEZ-MOI SUR
           </p>
           <div className="flex gap-6 md:pt-2">
@@ -72,13 +70,11 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Bas du footer */}
       <div className="pt-8 md:pt-20 text-center font-poppins text-xs md:text-xl opacity-80">
         <p>Designed & Built by Israel Hangy</p>
         <p>Copyright © {new Date().getFullYear()}</p>
       </div>
 
-      {/* Bouton flèche remonter */}
       <button
         onClick={scrollToTop}
         aria-label="Remonter en haut"

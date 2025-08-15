@@ -10,8 +10,15 @@ module.exports = {
         poppins: ['Poppins', 'sans-serif'],
         'big-hero': ['"Big Shoulders Display"', 'sans-serif'],
       },
-
-      // Dégradé animé
+      fontWeight: {
+        thin: 100,
+        light: 300,
+        normal: 400,
+        medium: 500,
+        semibold: 600,
+        bold: 700,
+        extrabold: 800,
+      },
       backgroundImage: {
         'gradient-moving': 'linear-gradient(270deg, #ff4d4d, #ff784d, #ffcc4d, #ff4d88, #ff4d4d)',
       },
@@ -32,7 +39,6 @@ module.exports = {
   },
   plugins: [
     require("daisyui"),
-
   ],
   daisyui: {
     themes: [
