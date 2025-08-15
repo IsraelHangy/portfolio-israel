@@ -6,17 +6,17 @@ const Navbar = () => {
             <div className="max-w-7xl mx-auto flex justify-center md:justify-between items-center p-2 md:p-4">
              <a
                 href="#"
-                className="flex items-center font-bold text-2xl md:pt-2"
+                className="flex items-center font-extrabold text-xl md:text-2xl md:pt-2"
                 >
-                <Flame
-                    className="mr-2"
-                    size={30} 
-                    strokeWidth={2} 
-                    fill="white" 
-                    color="white" 
+             <Flame
+                className="mr-2 w-[30px] h-[30px] md:w-[40px] md:h-[40px]"
+                strokeWidth={2}
+                fill="white"
+                color="white"
                 />
+
                 BAKI
-                <span className="text-red-500">DEV</span>
+                <span className="font-extrabold text-red-500">DEV</span>
             </a>
 
                 <ul className="hidden md:flex space-x-3 font-poppins">
