@@ -23,7 +23,6 @@ const Footer = () => {
       viewport={{ once: true, amount: 0.3 }}
       variants={footerVariants}
     >
-      {/* Haut du footer */}
       <div className="flex flex-col md:flex-row justify-between w-full items-center md:items-start gap-6 md:gap-0 text-center md:text-left">
         
         {/* Logo + Contact */}
@@ -36,25 +35,26 @@ const Footer = () => {
               fill="white"
               color="white"
             />
-
-            <p className="font-extrabold text-xl md:text-2xl">
+            <p className="font-extrabold text-xl md:text-2xl" style={{ fontWeight: 800 }}>
               BAKI<span className="text-red-500 pr-5">DEV</span>
             </p>
           </div>
 
           {/* Contact */}
-          <p className="font-extrabold text-lg md:text-2xl">CONTACTEZ-MOI</p>
-          <div className="flex items- md:pt-2">
-            <p className="text-sm font-poppins md:text-xl">israelngeve950@gmail.com</p>
-          </div>
-          <div className="flex items-center">
-            <p className="text-sm font-poppins  md:text-xl">+243974115802</p>
+          <p className="font-extrabold text-lg md:text-2xl" style={{ fontWeight: 800 }}>
+            CONTACTEZ-MOI
+          </p>
+          <div className="flex flex-col md:pt-2 gap-1">
+            <p className="text-sm md:text-xl font-poppins">israelngeve950@gmail.com</p>
+            <p className="text-sm md:text-xl font-poppins">+243974115802</p>
           </div>
         </div>
 
         {/* Suivez-moi */}
         <div className="flex flex-col items-center md:items-end gap-1 md:pt-10">
-          <p className="font-extrabold text-lg md:text-2xl">SUIVEZ-MOI SUR</p>
+          <p className="font-extrabold text-lg md:text-2xl" style={{ fontWeight: 800 }}>
+            SUIVEZ-MOI SUR
+          </p>
           <div className="flex gap-6 md:pt-2">
             <a href="https://x.com/IsraelNgeve?t=RSze1kboTwadGK35AsIcjg&s=09" target="_blank" rel="noopener noreferrer">
               <Twitter className="w-6 h-6 md:w-8 md:h-8 hover:text-red-500 transition" />
