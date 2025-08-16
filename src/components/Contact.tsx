@@ -72,7 +72,7 @@ const Contact = () => {
       variants={fadeInUp}
     >
       <section id="form">
-        <div className="md:mt-5 mt-5 mb-8 md:mb-0 ">
+        <div className="md:mt-5 mb-5 md:mb-0 ">
         <Title title="Envoyez un message !" />
         </div>
         <p className="text-center text-gray-300 font-light mb-8 md:mb-12 text-sm md:text-base">

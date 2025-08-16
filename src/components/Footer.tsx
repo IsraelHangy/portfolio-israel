@@ -27,9 +27,10 @@ const Footer = () => {
         
         {/* Logo + Contact */}
         <div className="flex flex-col items-center md:items-start">
-          <div className="flex items-center pb-5">
+          <a href="#">
+            <div className="flex items-center pb-5 gap-1">
             <Flame
-              className="mr-2 w-[30px] h-[30px] md:w-[40px] md:h-[40px]"
+              className=" w-[30px] h-[30px] md:w-[40px] md:h-[40px]"
               strokeWidth={2}
               fill="white"
               color="white"
@@ -38,6 +39,8 @@ const Footer = () => {
               BAKI<span className="text-red-500 pr-5">DEV</span>
             </p>
           </div>
+          </a>
+          
 
           <p className="font-poppins font-extrabold text-lg md:text-2xl">
             CONTACTEZ-MOI
