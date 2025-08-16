@@ -13,7 +13,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="md:fixed md:top-0 md:left-0 md:w-full z-50 bg-base-100">
+    <div className="fixed top-0 left-0 w-full z-50 bg-base-100">
       <div className="max-w-7xl mx-auto flex justify-between items-center p-2 md:p-4">
         <a href="#" className="flex items-center font-extrabold text-xl md:text-2xl">
           <div className="flex items-center gap-1">
@@ -51,12 +51,12 @@ const Navbar = () => {
             className="flex flex-col justify-center items-center w-10 h-10 gap-1 p-2"
           >
             <span
-              className={`block w-8 h-2 bg-white transform transition-all duration-300 ease-in-out ${
+              className={`block w-8 h-2 bg-white  transform transition-all duration-300 ease-in-out ${
                 menuOpen ? "rotate-45 translate-y-2" : ""
               }`}
             ></span>
             <span
-              className={`block w-8 h-2 bg-white transform transition-all duration-300 ease-in-out ${
+              className={`block w-8 h-2 bg-white  transform transition-all duration-300 ease-in-out ${
                 menuOpen ? "-rotate-45 -translate-y-2" : ""
               }`}
             ></span>
@@ -80,7 +80,14 @@ const Navbar = () => {
                 }`}
                 onClick={() => {
                   setActive(link.name);
-                  setMenuOpen(false);
+                  setMenuOpen(false); 
+                  
+                  const section = document.querySelector(link.href);
+                  if (section) {
+                    const yOffset = 70; 
+                    const y = section.getBoundingClientRect().top + window.pageYOffset - yOffset;
+                    window.scrollTo({ top: y, behavior: "smooth" });
+                  }
                 }}
               >
                 {link.name}
