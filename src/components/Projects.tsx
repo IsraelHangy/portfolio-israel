@@ -33,7 +33,7 @@ const projects = [
   {
     id: 3,
     title: 'Gestion de Projet Twitter Clone',
-    description: 'Mise en place et réalisation d’un clone de X (Twitter) en solo, en appliquant la méthodologie agile. Utilisation d’outils de gestion de projet ( GitHub Projects) pour suivre les tâches, assurer la collaboration et garantir une progression continue et structurée.',
+    description: 'Mise en place et réalisation d’un clone de X (Twitter) en solo, en appliquant la méthodologie agile. Utilisation d’outils de gestion de projet ( GitHub Projects) pour suivre les tâches, assurer la collaboration et garantir une progression continue et structurée.',
     technologies: ['Git', 'Github', 'kanban', 'Agile','Scrum'],
     demoLink: 'https://tweeter-clone-with-adonis-js-isr-production.up.railway.app',
     repoLink: 'https://github.com/kadea-academy-learners/tweeter-clone-with-adonis-js-IsraelHangy/issues?q=is%3Aissue%20state%3Aclosed',

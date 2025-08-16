@@ -1,6 +1,7 @@
 import Title from "./Title";
 import { motion } from "framer-motion";
-import { DatabaseBackup, Paintbrush, Palette } from "lucide-react";
+import { CodeXml, DatabaseBackup, LandPlot, Palette } from "lucide-react";
+
 
 import imgCSS from "../assets/techno/css.png";
 import imgJS from "../assets/techno/js.png";
@@ -36,7 +37,7 @@ const experiences = [
     title: "Développeur Frontend",
     description:
       "Je suis un développeur frontend passionné, spécialisé dans la création d’interfaces web modernes, fluides et réactives. J’accorde une grande importance à l’expérience utilisateur en concevant des designs qui allient esthétisme et performance.",
-    icon: <Palette className="text-red-500 scale-150" />,
+    icon: <CodeXml className="text-red-500 scale-150" />,
   },
   {
     id: 2,
@@ -50,7 +51,14 @@ const experiences = [
     title: "Passionné par l'UI/UX",
     description:
       "Je m’efforce de concevoir des interfaces utilisateurs à la fois intuitives, esthétiques et fonctionnelles. Mon objectif est de créer des expériences qui captivent l’utilisateur dès le premier regard tout en assurant une navigation fluide et naturelle, grâce à une forte maîtrise des principes visuels et ergonomiques.",
-    icon: <Paintbrush className="text-red-500 scale-150" />,
+    icon: <Palette className="text-red-500 scale-150" />,
+  },
+   {
+    id: 4,
+    title: "Gestion de projet",
+    description:
+      "Capable de gérer efficacement des projets en solo ou en équipe en appliquant les méthodologies agiles Scrum et Kanban. Mon utilisation de GitHub Projects me permet de planifier, organiser et suivre les tâches avec rigueur tout en assurant une progression continue. Je sais définir les priorités, m’adapter aux imprévus et maintenir une vision claire du projet.",
+    icon: <LandPlot className="text-red-500 scale-150" />,
   },
 ];
 
@@ -64,7 +72,7 @@ const Experiences = () => {
       <div className="flex flex-col-reverse md:flex-row">
         {/* Bloc des skills */}
         <div className="flex flex-wrap gap-4 md:w-1/3 mt-4 md:mt-0">
-          <p className="text-center font-medium text-xl w-full my-4 block md:hidden">
+          <p className="text-center font-normal text-xl w-full my-4 block md:hidden">
             Voici quelques technologies avec lesquelles j'ai travaillé <br /> récemment
           </p>
 

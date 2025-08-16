@@ -48,6 +48,7 @@ const About = () => {
             src={image}
             alt="Photo de profil"
             className="w-[32rem] h-[32rem] mr-20 rounded-xl object-cover"
+            loading="lazy" // <-- Lazy loading ajouté
           />
         </motion.div>
 
