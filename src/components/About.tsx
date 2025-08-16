@@ -9,7 +9,7 @@ const aboutSections = [
     title: "Qui suis-je ?",
     description: (
       <>
-        <span className="text-red-500 font-semibold">Développeur Web Fullstack</span> passionné pour la création des solutions numériques innovantes et utiles, avec une forte appétence sur le UX/UI design et gestion de bases de données, j’apporte curiosité, adaptabilité et une forte passion pour la technologie avec une envie avide d’apprendre et de comprendre comment les choses fonctionnent. Avec un esprit pratique et collaboratif, je contribue avec énergie, rigueur et créativité à chaque projet dans lequel je m’investis.
+        <span className="text-red-500 font-semibold">Développeur Web Fullstack</span> passionné pour la création des solutions numériques innovantes et utiles, avec une forte appétence sur le UX/UI design et gestion de bases de données, j’apporte curiosité, adaptabilité et une forte passion pour la technologie avec une envie avide d’apprendre et de comprendre comment les choses fonctionnent.
       </>
     ),
     icon: <ScanFace className="text-red-500 scale-150" />,
