@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <div
       id="Home"
-      className="flex flex-col-reverse md:flex-row justify-center md:justify-between items-center my-10 md:my-32 opacity-0 animate-fadeIn  scroll-mt-28"
+      className="flex flex-col-reverse md:flex-row justify-center md:justify-between items-center my-20 md:my-32 opacity-0 animate-fadeIn  scroll-mt-28"
     >
       <div className="flex flex-col">
         <h1 className="text-4xl md:text-8xl font-extrabold leading-tight text-center md:text-left mt-4">

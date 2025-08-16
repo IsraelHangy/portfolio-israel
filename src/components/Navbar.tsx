@@ -24,7 +24,7 @@ const Navbar = () => {
               color="white"
             />
             <p className="font-poppins font-extrabold text-xl md:text-2xl">
-              BAKI<span className="text-red-500 pr-5">DEV</span>
+              GOOD<span className="text-red-500 pr-5">DEV</span>
             </p>
           </div>
         </a>
