@@ -10,6 +10,9 @@ import imgFIGMA from "../assets/techno/figma.png";
 import imgNODE from "../assets/techno/node-js.png";
 import imgTYPE from "../assets/techno/typescript.svg";
 import imgTAILWIND from "../assets/techno/tailwind.png";
+import imgWORDPRESS from "../assets/techno/wordpress.svg";
+import imgVUE from "../assets/techno/vue.png";
+import imgCANVA from "../assets/techno/canva.png";
 import imgADONIS from "../assets/techno/adonis.js.svg";
 
 const skills = [
@@ -17,11 +20,14 @@ const skills = [
   { id: 2, name: "CSS", image: imgCSS },
   { id: 3, name: "JavaScript", image: imgJS },
   { id: 4, name: "React", image: imgREACT },
-  { id: 5, name: "Node.js", image: imgNODE },
+  { id: 5, name: "Vue.js", image: imgVUE },
   { id: 6, name: "Tailwind CSS", image: imgTAILWIND },
   { id: 7, name: "TypeScript", image: imgTYPE },
-  { id: 8, name: "Figma", image: imgFIGMA },
+  { id: 8, name: "Node.js", image: imgNODE },
   { id: 9, name: "Adonis.js", image: imgADONIS },
+  { id: 10, name: "Wordpress", image: imgWORDPRESS },
+  { id: 11, name: "Figma", image: imgFIGMA },
+  { id: 12, name: "Canva", image: imgCANVA },
 ];
 
 const experiences = [
@@ -50,8 +56,8 @@ const experiences = [
 
 const Experiences = () => {
   return (
-    <div className="md:pb-20" id="Experiences">
-      <div className="md:mt-10 mt-5 mb-8">
+    <div className="md:pb-20  scroll-mt-28" id="Experiences">
+      <div className="md:mt-10 md:mb-20 mt-5 mb-8">
         <Title title="MES COMPÉTENCES" />
       </div>
 

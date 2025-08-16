@@ -1,41 +1,42 @@
-import {  Flame} from "lucide-react"
+import { useState } from "react";
+import { Flame } from "lucide-react";
 
 const Navbar = () => {
-    return (
-        <div className="md:fixed md:top-0 md:left-0 md:w-full z-50 bg-base-100">
-            <div className="max-w-7xl mx-auto flex justify-center md:justify-between items-center p-2 md:p-4">
-             <a
-                href="#"
-                className="flex items-center font-extrabold text-xl md:text-2xl md:pt-2"
-                >
-             <Flame
-                className="mr-2 w-[30px] h-[30px] md:w-[40px] md:h-[40px]"
-                strokeWidth={2}
-                fill="white"
-                color="white"
-                />
+  const [active, setActive] = useState<string>("Home");
 
-                BAKI
-                <span className="font-extrabold text-red-500">DEV</span>
-            </a>
+  const links = [
+    { name: "Accueil", href: "#Home" },
+    { name: "A propos", href: "#About" },
+    { name: "Compétences", href: "#Experiences" },
+    { name: "Oeuvres", href: "#Projects" },
+  ];
 
-                <ul className="hidden md:flex space-x-3 font-poppins">
-                    <li>
-                        <a href="#Home" className="btn btn-lg btn-ghost text-xl">Accueil</a>
-                    </li>
-                    <li>
-                        <a href="#About" className="btn btn-lg btn-ghost text-xl">A propos</a>
-                    </li>
-                    <li>
-                        <a href="#Experiences" className="btn btn-lg btn-ghost text-xl">Compétences</a>
-                    </li>
-                    <li>
-                        <a href="#Projects" className="btn btn-lg btn-ghost text-xl">Oeuvres</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    )
-}
+  return (
+    <div className="md:fixed md:top-0 md:left-0 md:w-full z-50 bg-base-100">
+      <div className="max-w-7xl mx-auto flex justify-center md:justify-between items-center p-2 md:p-4">
+        <a href="#" className="flex items-center font-extrabold text-xl md:text-2xl md:pt-2">
+          <Flame className="mr-2 w-[30px] h-[30px] md:w-[40px] md:h-[40px]" strokeWidth={2} fill="white" color="white" />
+          BAKI<span className="font-extrabold text-red-500">DEV</span>
+        </a>
 
-export default Navbar
+        <ul className="hidden md:flex space-x-3 font-poppins">
+          {links.map((link) => (
+            <li key={link.name}>
+              <a
+                href={link.href}
+                className={`btn btn-lg btn-ghost text-xl ${
+                  active === link.name ? "text-red-500" : ""
+                }`}
+                onClick={() => setActive(link.name)}
+              >
+                {link.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
+};
+
+export default Navbar;

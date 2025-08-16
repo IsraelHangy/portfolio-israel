@@ -18,7 +18,10 @@ const aboutSections = [
 
 const About = () => {
   return (
-    <div className="bg-base-300 p-10 md:pb-20 relative" id="About">
+    <div
+      className="bg-base-300 p-10 md:pb-20 relative scroll-mt-28"
+      id="About"
+    >
 
       {/* Grandes guillemets décoratives */}
       <span className="hidden md:block absolute top-20 left-[12%] text-[10rem] text-white font-extrabold opacity-70 select-none leading-none z-0">

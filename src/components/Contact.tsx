@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
+import Title from "./Title";
 
 interface FormData {
   name: string;
@@ -64,16 +65,16 @@ const Contact = () => {
   return (
     <motion.div
       id="Contact"
-      className="bg-base-300 px-10 pt-10 pb-20 font-bold"
+      className="bg-base-300 px-10 pt-10 pb-20 font-bold  scroll-mt-28"
       initial="initial"
       whileInView="animate"
       viewport={{ once: true, amount: 0.3 }}
       variants={fadeInUp}
     >
       <section id="form">
-        <h2 className="lg:text-5xl text-2xl font-bold mb-4 text-center">
-          Envoyez un message !
-        </h2>
+        <div className="md:mt-5 mt-5 mb-8 md:mb-0 ">
+        <Title title="Envoyez un message !" />
+        </div>
         <p className="text-center text-gray-300 font-light mb-8 md:mb-12 text-sm md:text-base">
           Vous avez une question, une proposition, un commentaire ou vous
           souhaitez simplement <br />
