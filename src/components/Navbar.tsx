@@ -14,7 +14,7 @@ const Navbar = () => {
 
   return (
     <div className="fixed top-0 left-0 w-full z-50 bg-base-100">
-      <div className="max-w-7xl mx-auto flex justify-between items-center p-2 md:p-4">
+      <div className="max-w-7xl mx-auto flex justify-between items-center pt-2 p-2 md:p-4">
         <a href="#" className="flex items-center font-extrabold text-xl md:text-2xl">
           <div className="flex items-center gap-1">
             <Flame
