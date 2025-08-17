@@ -68,7 +68,7 @@ const Contact = () => {
       className="
           bg-base-300 px-10 pt-10 pb-20 font-bold scroll-mt-28 relative
           bg-no-repeat 
-          bg-[length:200px] bg-[right_0rem_top_3rem] 
+          bg-[length:150px] bg-[right_0rem_top_3rem] 
           lg:bg-[length:300px] lg:bg-[right_20rem_top_2rem] 
         "
       style={{
@@ -83,7 +83,7 @@ const Contact = () => {
         <div className="md:mt-5 mb-5 md:mb-0">
           <Title title="Envoyez un message" />
         </div>
-        <p className="text-center text-gray-300 font-light mb-5 mt-8 md:mt-10 md:mb-12 text-sm md:text-base">
+        <p className="text-center text-gray-300 font-light mb-2 mt-5 md:mt-10 md:mb-14 text-sm md:text-xl">
           Vous avez une question, une proposition, un commentaire ou vous
           souhaitez simplement <br />
           dire bonjour ? Allez-y
