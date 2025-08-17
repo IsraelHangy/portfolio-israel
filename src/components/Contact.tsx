@@ -11,10 +11,10 @@ interface FormData {
 
 const fadeInUp: Variants = {
   initial: { opacity: 0, y: 20 },
-  animate: { 
-    opacity: 1, 
-    y: 0, 
-    transition: { duration: 0.6, ease: "easeInOut" }
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeInOut" },
   },
 };
 
@@ -65,17 +65,25 @@ const Contact = () => {
   return (
     <motion.div
       id="Contact"
-      className="bg-base-300 px-10 pt-10 pb-20 font-bold  scroll-mt-28"
+      className="
+          bg-base-300 px-10 pt-10 pb-20 font-bold scroll-mt-28 relative
+          bg-no-repeat 
+          bg-[length:200px] bg-[right_0rem_top_3rem] 
+          lg:bg-[length:300px] lg:bg-[right_20rem_top_2rem] 
+        "
+      style={{
+        backgroundImage: "url(/paperPlane.svg)",
+      }}
       initial="initial"
       whileInView="animate"
       viewport={{ once: true, amount: 0.3 }}
       variants={fadeInUp}
     >
       <section id="form">
-        <div className="md:mt-5 mb-5 md:mb-0 ">
-        <Title title="Envoyez un message !" />
+        <div className="md:mt-5 mb-5 md:mb-0">
+          <Title title="Envoyez un message" />
         </div>
-        <p className="text-center text-gray-300 font-light mb-8 md:mb-12 text-sm md:text-base">
+        <p className="text-center text-gray-300 font-light mb-5 mt-8 md:mt-10 md:mb-12 text-sm md:text-base">
           Vous avez une question, une proposition, un commentaire ou vous
           souhaitez simplement <br />
           dire bonjour ? Allez-y
@@ -95,7 +103,7 @@ const Contact = () => {
                 name="name"
                 type="text"
                 placeholder="Entrez votre nom"
-                className="w-full font-poppins font-normal md:font-semibold py-3  text-white text-base md:text-xl bg-base-300 border-b border-white/50 focus:border-red-700 transition duration-300 ease-in-out outline-none focus:scale-[1.02]"
+                className="w-full font-poppins font-normal md:font-semibold py-3 text-white text-base md:text-xl bg-base-300 border-b border-white/50 focus:border-red-700 transition duration-300 ease-in-out outline-none focus:scale-[1.02]"
                 value={formData.name}
                 onChange={handleChange}
                 required
@@ -148,7 +156,11 @@ const Contact = () => {
                 stroke="currentColor"
                 strokeWidth={2}
               >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M5 13l4 4L19 7"
+                />
               </svg>
               <span>Message envoyé avec succès !</span>
             </div>
