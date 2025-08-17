@@ -68,7 +68,7 @@ const Contact = () => {
       className="
           bg-base-300 px-10 pt-10 pb-20 font-bold scroll-mt-28 relative
           bg-no-repeat 
-          bg-[length:150px] bg-[right_0rem_top_3rem] 
+          bg-[length:150px] bg-[right_1rem_top_3rem] 
           lg:bg-[length:300px] lg:bg-[right_20rem_top_2rem] 
         "
       style={{

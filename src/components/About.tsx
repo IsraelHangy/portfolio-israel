@@ -15,9 +15,9 @@ const aboutSections = [
 const About = () => {
   return (
     <section id="About" className="scroll-mt-28">
-      
 
-     <div
+
+      <div
         className="bg-base-300 relative 
                   bg-no-repeat bg-center
                   bg-[length:280px] md:bg-[length:350px] 
@@ -26,18 +26,21 @@ const About = () => {
           backgroundImage: "url(/graduationCap.svg)",
         }}
       >
-        {/* Titre principal en haut */}
-      <div className="pt-10 justify-center">
-        <Title title="À PROPOS DE MOI" />
-      </div>
+        {/* Titre principal */}
+        <div className="pt-10 justify-center">
+          <Title title="À PROPOS DE MOI" />
+        </div>
 
-        {/* Grandes guillemets décoratives */}
+        {/* guillemets décoratives */}
+
         <span className="absolute top-12 left-[2%] text-[7rem] md:top-20 md:left-[12%] md:text-[10rem] text-white font-extrabold opacity-70 select-none leading-none z-0">
-          “
+          "
         </span>
-        <span className="absolute text-[7rem] right-[5%] -bottom-5  md:-bottom-10 md:right-[12%] md:text-[10rem] text-white font-extrabold opacity-70 select-none leading-none z-0">
-          ”
+        <span className="absolute text-[7rem] right-[5%] -bottom-5 md:-bottom-10 md:right-[12%] md:text-[10rem] text-white font-extrabold opacity-70 select-none leading-none z-0">
+          "
         </span>
+
+
 
         {/* Contenu principal */}
         <div className="p-10 relative z-10 flex justify-center">
