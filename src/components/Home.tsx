@@ -1,5 +1,5 @@
 import { FileText, Mail } from "lucide-react";
-import image from "../assets/imageIsrael.webp";
+import image from "../assets/imageIsraelDev.png";
 import cvPDF from "../assets/CV_Israel.pdf"; 
 
 const Home = () => {
