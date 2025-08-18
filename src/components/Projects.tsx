@@ -33,7 +33,7 @@ const projects = [
   {
     id: 3,
     title: 'Gestion de Projet Twitter Clone',
-    description: 'Mise en place et réalisation d’un clone de X (Twitter) en solo, en appliquant la méthodologie agile. Utilisation d’outils de gestion de projet ( GitHub Projects) pour suivre les tâches, assurer la collaboration et garantir une progression continue et structurée.',
+    description: 'Mise en place et réalisation d’un clone de X (Twitter) en solo, en appliquant la méthodologie agile. Utilisation d’outils de gestion de projet GitHub Projects pour suivre les tâches, assurer la collaboration et garantir une progression continue et structurée.',
     technologies: ['Git', 'Github', 'kanban', 'Agile','Scrum'],
     demoLink: 'https://tweeter-clone-with-adonis-js-isr-production.up.railway.app',
     repoLink: 'https://github.com/kadea-academy-learners/tweeter-clone-with-adonis-js-IsraelHangy/issues?q=is%3Aissue%20state%3Aclosed',
@@ -76,7 +76,7 @@ const fadeInUp: Variants = {
 
 const Projects = () => {
   return (
-    <div className="my-10  scroll-mt-28" id="Projects">
+    <div className="my-10 md:my-20  scroll-mt-28" id="Projects">
       <div className="mt-20 md:mt-0 md:mb-20 mb-8">
         <Title title="Mes Oeuvres" />
       </div>
@@ -101,7 +101,7 @@ const Projects = () => {
             </div>
             <div className="flex flex-wrap gap-2 my-3">
               {project.technologies.map((tech, idx) => (
-                <span key={idx} className="badge bg-red-600 md:bg-red-700 badge-sm">
+                <span key={idx} className="badge bg-red-700 md:bg-red-700 badge-sm">
                   {tech}
                 </span>
               ))}
@@ -111,7 +111,7 @@ const Projects = () => {
                 href={project.demoLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-lg bg-red-600 md:bg-red-700 hover:bg-red-900 active:scale-95 transition-transform duration-150 w-2/3 text-white"
+                className="btn btn-lg  bg-red-700 md:bg-red-700 hover:bg-red-900 active:scale-95 transition-transform duration-150 w-2/3 text-white"
               >
                 Visitez le site <Telescope className="w-4 ml-2" />
               </a>

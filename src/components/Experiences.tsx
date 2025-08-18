@@ -64,7 +64,7 @@ const experiences = [
 
 const Experiences = () => {
   return (
-    <div className="md:pb-20  scroll-mt-28" id="Experiences">
+    <div className="md:pb-20 scroll-mt-28" id="Experiences">
       <div className="md:mt-10 md:mb-20 mt-5 mb-8">
         <Title title="MES COMPÉTENCES" />
       </div>

@@ -48,6 +48,7 @@ const Footer = () => {
           <div className="flex flex-col md:pt-2 gap-1">
             <p className="text-sm md:text-xl font-poppins">israelngeve950@gmail.com</p>
             <p className="text-sm md:text-xl font-poppins">+243974115802</p>
+             <p className="text-sm md:text-xl font-poppins">Kinshasa, <span className="font-semibold text-red-500">RDC</span></p>
           </div>
         </div>
 
@@ -83,7 +84,7 @@ const Footer = () => {
         aria-label="Remonter en haut"
         className="absolute right-3 bottom-0 md:right-20 md:bottom-30 flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-red-600 text-white shadow-lg hover:bg-red-900 transition"
       >
-        <ArrowUp className="w-5 h-5 md:w-6 md:h-6" />
+        <ArrowUp className="w-6 h-6 md:w-7 md:h-7" />
       </button>
     </motion.footer>
   );
