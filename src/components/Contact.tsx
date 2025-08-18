@@ -114,14 +114,14 @@ const Contact = () => {
         <form className="max-w-3xl mx-auto pt-8" onSubmit={handleSubmit}>
           <div className="grid grid-cols-1 md:grid-cols-2 md:gap-20 gap-10 md:mb-20 mb-8">
             <div>
-              <label className="block text-gray-200 text-sm md:text-xl font-bold mb-2">
+              <label className="block text-gray-200 text-sm md:text-xl font-poppins font-semibold mb-2">
                 VOTRE PRENOM
               </label>
               <input
                 name="prename"
                 type="text"
                 placeholder="Entrez votre prénom"
-                className="w-full py-3 text-white text-sm font-semibold md:text-xl bg-base-300 border-b border-white/50 focus:border-red-500 outline-none"
+                className="w-full font-poppins font-normal md:font-semibold py-3 text-white text-base md:text-xl bg-base-300 border-b border-white/50 focus:border-red-500 md:focus:border-red-700 transition duration-300 ease-in-out outline-none focus:scale-[1.02]"
                 value={formData.prename}
                 onChange={handleChange}
                 required
@@ -129,14 +129,14 @@ const Contact = () => {
             </div>
 
             <div>
-              <label className="block text-gray-200 text-sm md:text-xl font-bold mb-2">
+              <label className="block text-gray-200 text-sm md:text-xl font-poppins font-semibold mb-2">
                 VOTRE NOM
               </label>
               <input
                 name="name"
                 type="text"
                 placeholder="Entrez votre nom"
-                className="w-full py-3 text-white text-sm font-semibold md:text-xl bg-base-300 border-b border-white/50 focus:border-red-500 outline-none"
+                className="w-full font-poppins font-normal md:font-semibold py-3 text-white text-base md:text-xl bg-base-300 border-b border-white/50 focus:border-red-500 md:focus:border-red-700 transition duration-300 ease-in-out outline-none focus:scale-[1.02]"
                 value={formData.name}
                 onChange={handleChange}
                 required
@@ -144,14 +144,14 @@ const Contact = () => {
             </div>
 
             <div>
-              <label className="block text-gray-200 text-sm md:text-xl font-bold mb-2">
+              <label className="block text-gray-200 text-sm md:text-xl font-poppins font-semibold  mb-2">
                 VOTRE EMAIL
               </label>
               <input
                 name="email"
                 type="email"
                 placeholder="Entrez votre email"
-                className="w-full py-3 text-white text-sm font-semibold md:text-xl bg-base-300 border-b border-white/50 focus:border-red-500 outline-none"
+                className="w-full font-poppins font-normal md:font-semibold py-3 text-white text-base md:text-xl bg-base-300 border-b border-white/50 focus:border-red-500 md:focus:border-red-700 transition duration-300 ease-in-out outline-none focus:scale-[1.02]"
                 value={formData.email}
                 onChange={handleChange}
                 required
@@ -159,7 +159,7 @@ const Contact = () => {
             </div>
 
             <div>
-              <label className="block text-gray-200 text-sm md:text-xl font-bold mb-2">
+              <label className="block text-gray-200 text-sm md:text-xl font-poppins font-semibold mb-2">
                 VOTRE NUMERO
               </label>
               <input
@@ -168,7 +168,7 @@ const Contact = () => {
                 pattern="^\+?[0-9]{8,15}$"
                 inputMode="numeric"
                 placeholder="Entrez votre numéro"
-                className="w-full py-3 text-white text-sm font-semibold md:text-xl bg-base-300 border-b border-white/50 focus:border-red-500 outline-none"
+                className="w-full font-poppins font-normal md:font-semibold py-3 text-white text-base md:text-xl bg-base-300 border-b border-white/50 focus:border-red-500 md:focus:border-red-700 transition duration-300 ease-in-out outline-none focus:scale-[1.02]"
                 value={formData.numero}
                 onChange={handleChange}
                 required
@@ -177,14 +177,14 @@ const Contact = () => {
           </div>
 
           <div className="mb-8">
-            <label className="block text-gray-200 text-sm md:text-xl font-bold mb-2">
+            <label className="block text-gray-200 text-sm md:text-xl font-poppins font-semibold mb-2">
               VOTRE MESSAGE
             </label>
             <textarea
               name="message"
               placeholder="Écrivez votre message"
               rows={4}
-              className="w-full py-3 text-white text-sm md:text-xl bg-base-300 font-semibold border-b border-white/50 focus:border-red-500 outline-none resize-none"
+              className="w-full font-poppins font-normal md:font-semibold py-3 text-white text-base md:text-xl bg-base-300 border-b border-white/50 focus:border-red-700 transition duration-300 ease-in-out outline-none focus:scale-[1.02] resize-none"
               value={formData.message}
               onChange={handleChange}
               required
@@ -193,7 +193,7 @@ const Contact = () => {
 
           <button
             type="submit"
-            className="w-full bg-red-600 hover:bg-red-900 text-white py-3 font-bold"
+            className="w-full bg-red-600 hover:bg-red-900 text-white py-3 font-poppins font-semibold md:font-bold"
           >
             ENVOYEZ VOTRE MESSAGE
           </button>
