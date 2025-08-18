@@ -57,7 +57,7 @@ const experiences = [
     id: 4,
     title: "Gestion de projet",
     description:
-      "Capable de gérer efficacement des projets en solo ou en équipe en appliquant les méthodologies agiles Scrum et Kanban. Mon utilisation de GitHub Projects me permet de planifier, organiser et suivre les tâches avec rigueur tout en assurant une progression continue. Je sais définir les priorités, m’adapter aux imprévus et maintenir une vision claire du projet.",
+      "Capable de gérer efficacement des projets en solo ou en équipe en appliquant les méthodologies agiles Scrum et Kanban. Mon utilisation de GitHub Projects me permet de planifier, définir les priorités, m’adapter aux imprévus, m'organiser et suivre les tâches avec rigueur tout en assurant une progression continue.",
     icon: <LandPlot className="text-red-500 scale-150" />,
   },
 ];

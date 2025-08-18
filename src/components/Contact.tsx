@@ -66,9 +66,9 @@ const Contact = () => {
     <motion.div
       id="Contact"
       className="
-          bg-base-300 px-10 pt-10 pb-20 font-bold scroll-mt-28 relative
+          bg-base-200 px-10 pt-10 pb-20 font-bold scroll-mt-28 relative
           bg-no-repeat 
-          bg-[length:150px] bg-[right_0rem_top_2rem] 
+          bg-[length:320px] bg-[right_0rem_top_1rem] 
           lg:bg-[length:300px] lg:bg-[right_20rem_top_2rem] 
         "
       style={{
