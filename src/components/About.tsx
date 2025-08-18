@@ -18,7 +18,7 @@ const About = () => {
 
 
       <div
-        className="bg-base-200 relative 
+        className="bg-base-300 relative 
                   bg-no-repeat bg-center
                   bg-[length:280px] md:bg-[length:350px] 
                   pb-10 md:pt-5 md:pb-20"

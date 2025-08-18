@@ -110,7 +110,7 @@ const Experiences = () => {
           {experiences.map((experience, index) => (
             <motion.div
               key={experience.id}
-              className="flex flex-col md:flex-row items-center bg-base-200 p-5 rounded-xl shadow-xl"
+              className="flex flex-col md:flex-row items-center bg-base-300 p-5 rounded-xl shadow-xl"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}

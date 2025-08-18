@@ -66,9 +66,9 @@ const Contact = () => {
     <motion.div
       id="Contact"
       className="
-          bg-base-200 px-10 pt-10 pb-20 font-bold scroll-mt-28 relative
+          bg-base-300 px-10 pt-10 pb-20 font-bold scroll-mt-28 relative
           bg-no-repeat 
-          bg-[length:320px] bg-[right_0rem_top_1rem] 
+          bg-[length:290px] bg-[right_0rem_top_1rem] 
           lg:bg-[length:300px] lg:bg-[right_20rem_top_2rem] 
         "
       style={{
@@ -83,7 +83,7 @@ const Contact = () => {
         <div className="md:mt-5 mb-5 md:mb-0">
           <Title title="Envoyez un message" />
         </div>
-        <p className="text-center text-gray-300 font-light mb-2 mt-5 md:mt-10 md:mb-14 text-sm md:text-xl">
+        <p className="text-center text-gray-300 font-light mb-2 mt-8 md:mt-10 md:mb-14 text-sm md:text-xl">
           Vous avez une question, une proposition, un commentaire ou vous
           souhaitez simplement <br />
           dire bonjour ? Allez-y
