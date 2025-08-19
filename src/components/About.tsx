@@ -36,7 +36,7 @@ const About = () => {
         <span className="absolute top-12 left-[2%] text-[7rem] md:top-20 md:left-[12%] md:text-[10rem] text-white font-extrabold font-poppins opacity-70 select-none leading-none z-0">
           "
         </span>
-        <span className="absolute text-[7rem] right-[5%] -bottom-5 md:-bottom-10 md:right-[12%] md:text-[10rem] text-white font-extrabold font-poppins opacity-70 select-none leading-none z-0">
+        <span className="absolute text-[7rem] right-[5%] -bottom-10 md:-bottom-10 md:right-[12%] md:text-[10rem] text-white font-extrabold font-poppins opacity-70 select-none leading-none z-0">
           "
         </span>
 

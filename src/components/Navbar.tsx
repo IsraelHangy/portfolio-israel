@@ -44,7 +44,7 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* Hamburger mobile à deux traits */}
+        {/* Hamburger mobile */}
         <div className="md:hidden">
           <button
             onClick={() => setMenuOpen(!menuOpen)}

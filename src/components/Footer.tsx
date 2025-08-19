@@ -1,5 +1,5 @@
 import { motion, easeOut } from "framer-motion";
-import { Flame, Facebook, Github, Linkedin, Twitter, ArrowUp } from "lucide-react";
+import { Flame, Facebook, Github, Linkedin, Twitter, ArrowUp, Mail, Phone, MapPin } from "lucide-react";
 
 const footerVariants = {
   hidden: { opacity: 0, y: 50 },
@@ -29,26 +29,34 @@ const Footer = () => {
         <div className="flex flex-col items-center md:items-start">
           <a href="#">
             <div className="flex items-center pb-5 gap-1">
-            <Flame
-              className=" w-[30px] h-[30px] md:w-[40px] md:h-[40px]"
-              strokeWidth={2}
-              fill="white"
-              color="white"
-            />
-            <p className="font-poppins font-extrabold text-xl md:text-2xl">
-              GOOD<span className="text-red-500 pr-5">DEV</span>
-            </p>
-          </div>
+              <Flame
+                className="w-[30px] h-[30px] md:w-[40px] md:h-[40px]"
+                strokeWidth={2}
+                fill="white"
+                color="white"
+              />
+              <p className="font-poppins font-extrabold text-xl md:text-2xl">
+                GOOD<span className="text-red-500 pr-5">DEV</span>
+              </p>
+            </div>
           </a>
-          
 
           <p className="font-poppins font-extrabold text-lg md:text-2xl">
             CONTACTEZ-MOI
           </p>
-          <div className="flex flex-col md:pt-2 gap-1">
-            <p className="text-sm md:text-xl font-poppins">israelngeve950@gmail.com</p>
-            <p className="text-sm md:text-xl font-poppins">+243974115802</p>
-             <p className="text-sm md:text-xl font-poppins">Kinshasa, <span className="font-semibold text-red-500">RDC</span></p>
+          <div className="flex flex-col md:pt-2 pt-1 gap-2 text-center md:text-left">
+            <div className="text-sm md:text-xl font-poppins flex items-center gap-2 justify-center md:justify-start">
+              <Mail className="hidden md:inline-block w-6 h-6 text-red-500" />
+              israelngeve950@gmail.com
+            </div>
+            <div className="text-sm md:text-xl font-poppins flex items-center gap-2 justify-center md:justify-start">
+              <Phone className="hidden md:inline-block w-6 h-6 text-red-500" />
+              +243974115802
+            </div>
+            <div className="text-sm md:text-xl font-poppins flex items-center gap-2 justify-center md:justify-start">
+              <MapPin className="hidden md:inline-block w-6 h-6 text-red-500" />
+              Kinshasa, <span className="font-semibold text-red-500">RDC</span>
+            </div>
           </div>
         </div>
 
@@ -57,7 +65,7 @@ const Footer = () => {
           <p className="font-poppins font-extrabold text-lg md:text-2xl">
             SUIVEZ-MOI SUR
           </p>
-          <div className="flex gap-6 md:pt-2">
+          <div className="flex gap-6 md:pt-2 pt-1">
             <a href="https://x.com/IsraelNgeve?t=RSze1kboTwadGK35AsIcjg&s=09" target="_blank" rel="noopener noreferrer">
               <Twitter className="w-6 h-6 md:w-8 md:h-8 hover:text-red-500 transition" />
             </a>
@@ -82,7 +90,7 @@ const Footer = () => {
       <button
         onClick={scrollToTop}
         aria-label="Remonter en haut"
-        className="absolute right-3 bottom-0 md:right-20 md:bottom-30 flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-red-600 text-white shadow-lg hover:bg-red-900 transition"
+        className="absolute right-3 bottom-0 md:right-20 md:bottom-30 flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-red-600 text-white shadow-lg hover:bg-red-800 transition"
       >
         <ArrowUp className="w-6 h-6 md:w-7 md:h-7" />
       </button>

@@ -95,14 +95,24 @@ const Contact = () => {
 
   return (
     <motion.div
-      id="Contact"
-      className="bg-base-300 px-10 pt-10 pb-20 font-bold scroll-mt-28 relative"
-      initial="initial"
-      whileInView="animate"
-      viewport={{ once: true, amount: 0.3 }}
+      id="Contact" 
+      className=" bg-base-300 px-10 pt-10 pb-20 font-bold scroll-mt-28 relative 
+      bg-no-repeat bg-[length:260px] bg-[right_0rem_top_2rem] 
+      lg:bg-[length:300px] lg:bg-[right_18rem_top_2rem] " 
+      style={{ backgroundImage: "url(/paperPlane.svg)", }} 
+      initial="initial" whileInView="animate" 
+      viewport={{ once: true, amount: 0.3 }} 
       variants={fadeInUp}
     >
-      <section>
+      <section id="form"
+        style={{
+          backgroundImage: "url(/paperPlane.svg)",
+          backgroundPosition: "right 75rem top 38rem",
+          backgroundSize: "300px",
+          backgroundRepeat: "no-repeat",
+        }
+        }>
+
         <div className="md:mt-5 mb-5 md:mb-0">
           <Title title="Envoyez un message" />
         </div>
@@ -193,7 +203,7 @@ const Contact = () => {
 
           <button
             type="submit"
-            className="w-full bg-red-600 hover:bg-red-900 text-white py-3 font-poppins font-semibold md:font-bold"
+            className="w-full bg-red-600 hover:bg-red-800 text-white py-3 font-poppins font-semibold md:font-bold"
           >
             ENVOYEZ VOTRE MESSAGE
           </button>
