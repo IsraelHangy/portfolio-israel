@@ -76,7 +76,7 @@ const Navbar = () => {
 
       {/* Mobile full-screen menu (sous la navbar) */}
       <div
-        className={`md:hidden fixed top-[40px] left-0 w-full h-[calc(100%-20px)] bg-base-100 flex flex-col items-center justify-center transform transition-all duration-500 ease-in-out ${
+        className={`md:hidden fixed top-[45px] left-0 w-full h-[calc(100%-20px)] bg-base-100 flex flex-col items-center justify-center transform transition-all duration-500 ease-in-out ${
           menuOpen ? "translate-y-0 opacity-100 visible" : "-translate-y-full opacity-0 invisible"
         }`}
       >
