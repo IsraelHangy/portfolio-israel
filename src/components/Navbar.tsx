@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
-import { Flame } from "lucide-react";
+import { Flame, Moon, Sun } from "lucide-react";
 import cvPDF from "../assets/CV_Israel.pdf";
 
 const Navbar = () => {
   const [active, setActive] = useState<string>("Home");
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
- const [theme, setTheme] = useState<"light" | "dark">("light");
+  const [theme, setTheme] = useState<"light" | "dark">("light");
 
 
   const links = [
@@ -67,54 +67,41 @@ const Navbar = () => {
 
           {/* Interrupteur dark/light */}
           <li>
-            <label className="swap swap-rotate">
+            <label className="swap swap-rotate md:ml-20">
               <input
                 type="checkbox"
                 onChange={() => setTheme(theme === "light" ? "dark" : "light")}
-                checked={theme === "dark"} 
+                checked={theme === "dark"}
               />
               {/* Soleil = light */}
-              <svg
-                className="swap-off fill-current w-8 h-8 text-yellow-400"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-              >
-                <path d="M5.64,17l-1.41,1.41l-1.41-1.41L4.23,17 M12,4a1,1 0 0,1 1,1v2a1,1 0 0,1-2,0V5a1,1 0 0,1,1-1m6.36,13l1.41,1.41l1.41-1.41L19.77,17M12,18a6,6 0 1,1 0-12a6,6 0 0,1 0,12Z" />
-              </svg>
+              <Sun
+                className="swap-off fill-current w-9 h-9 text-base-content"
+              />
+
               {/* Lune = dark */}
-              <svg
-                className="swap-on fill-current w-8 h-8 text-base-content"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-              >
-                <path d="M20.354,15.354a9,9 0 1,1-11.708-11.708a7,7 0 1,0 11.708,11.708Z" />
-              </svg>
+              <Moon
+                className="swap-on fill-current w-9 h-9 text-base-content"
+              />
+
             </label>
           </li>
         </ul>
 
         {/* Mobile : interrupteur + hamburger */}
         <div className="md:hidden flex items-center gap-2">
-          <label className="swap swap-rotate">
+          <label className="swap swap-rotate mr-3">
             <input
               type="checkbox"
               onChange={() => setTheme(theme === "light" ? "dark" : "light")}
               checked={theme === "dark"}
             />
-            <svg
-              className="swap-off fill-current w-7 h-7 text-yellow-400"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-            >
-              <path d="M5.64,17l-1.41,1.41l-1.41-1.41L4.23,17 M12,4a1,1 0 0,1 1,1v2a1,1 0 0,1-2,0V5a1,1 0 0,1,1-1m6.36,13l1.41,1.41l1.41-1.41L19.77,17M12,18a6,6 0 1,1 0-12a6,6 0 0,1 0,12Z" />
-            </svg>
-            <svg
+            <Sun
+              className="swap-off fill-current w-7 h-7 text-base-content"
+            />
+
+            <Moon
               className="swap-on fill-current w-7 h-7 text-base-content"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-            >
-              <path d="M20.354,15.354a9,9 0 1,1-11.708-11.708a7,7 0 1,0 11.708,11.708Z" />
-            </svg>
+            />
           </label>
 
           {/* Hamburger mobile */}
