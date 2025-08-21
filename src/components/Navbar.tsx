@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Flame } from "lucide-react";
 
 const Navbar = () => {
@@ -11,6 +11,15 @@ const Navbar = () => {
     { name: "Compétences", href: "#Experiences" },
     { name: "Oeuvres", href: "#Projects" },
   ];
+
+  // Bloquer le scroll quand le menu est ouvert
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [menuOpen]);
 
   return (
     <div className="fixed top-0 left-0 w-full z-50 bg-base-100 shadow-md">
@@ -67,7 +76,7 @@ const Navbar = () => {
 
       {/* Mobile full-screen menu (sous la navbar) */}
       <div
-        className={`md:hidden fixed top-[64px] left-0 w-full h-[calc(100%-64px)] bg-base-100 flex flex-col items-center justify-center transform transition-all duration-500 ease-in-out ${
+        className={`md:hidden fixed top-[40px] left-0 w-full h-[calc(100%-20px)] bg-base-100 flex flex-col items-center justify-center transform transition-all duration-500 ease-in-out ${
           menuOpen ? "translate-y-0 opacity-100 visible" : "-translate-y-full opacity-0 invisible"
         }`}
       >

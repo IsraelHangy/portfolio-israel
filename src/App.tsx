@@ -9,7 +9,7 @@ import Contact from "./components/Contact";
 export default function App() {
   return (
     <div>
-      <div className="p-5">
+      <div className="p-5 md:px-[15%]">
         <Navbar />
         <Home />
       </div>
