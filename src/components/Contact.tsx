@@ -98,7 +98,7 @@ const Contact = () => {
       id="Contact" 
       className=" bg-base-300 px-10 pt-10 pb-20 font-bold scroll-mt-28 relative 
       bg-no-repeat bg-[length:260px] bg-[right_0rem_top_2rem] 
-      lg:bg-[length:300px] lg:bg-[right_18rem_top_2rem] " 
+      lg:bg-[length:350px] lg:bg-[right_23rem_top_2rem] " 
       style={{ backgroundImage: "url(/paperPlane.svg)", }} 
       initial="initial" whileInView="animate" 
       viewport={{ once: true, amount: 0.3 }} 
@@ -107,8 +107,8 @@ const Contact = () => {
       <section id="form"
         style={{
           backgroundImage: "url(/paperPlane.svg)",
-          backgroundPosition: "right 75rem top 38rem",
-          backgroundSize: "300px",
+          backgroundPosition: "right 90rem top 38rem",
+          backgroundSize: "350px",
           backgroundRepeat: "no-repeat",
         }
         }>
@@ -194,7 +194,7 @@ const Contact = () => {
               name="message"
               placeholder="Écrivez votre message"
               rows={4}
-              className="w-full font-poppins font-normal  py-3 text-white text-base md:text-xl bg-base-300 border-b border-white/50 focus:border-red-700 transition duration-300 ease-in-out outline-none focus:scale-[1.02] resize-none"
+              className="w-full font-poppins font-normal  py-3 text-white text-base md:text-xl bg-base-300 border-b border-white/50 focus:border-red-500 md:focus:border-red-700 transition duration-300 ease-in-out outline-none focus:scale-[1.02] resize-none"
               value={formData.message}
               onChange={handleChange}
               required
@@ -203,7 +203,7 @@ const Contact = () => {
 
           <button
             type="submit"
-            className="w-full bg-red-600 hover:bg-red-800 text-white py-3 font-poppins font-semibold md:font-bold"
+            className="w-full bg-[#b51c11] hover:bg-[#79140f]  text-white py-3 font-poppins font-semibold md:font-bold"
           >
             ENVOYEZ VOTRE MESSAGE
           </button>

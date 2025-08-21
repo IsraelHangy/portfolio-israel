@@ -43,7 +43,7 @@ const projects = [
     id: 4,
     title: 'Application Clone Twitter X',
     description: 'Réalisation d’un clone de X (anciennement Twitter) avec le framework AdonisJS. Le projet comprend la création d’interfaces utilisateur statiques, l’intégration de données dynamiques via des contrôleurs et modèles.',
-    technologies: ['HTML', 'Tailwind', 'Node js', 'Typescript', 'Adonis js','Railway'],
+    technologies: ['HTML', 'Tailwind', 'Node js', 'Typescript', 'Adonis js'],
     demoLink: 'https://tweeter-clone-with-adonis-js-isr-production.up.railway.app',
     repoLink: 'https://github.com/kadea-academy-learners/tweeter-clone-with-adonis-js-IsraelHangy',
     image: img3,
@@ -101,7 +101,7 @@ const Projects = () => {
             </div>
             <div className="flex flex-wrap gap-2 my-3">
               {project.technologies.map((tech, idx) => (
-                <span key={idx} className="badge bg-red-600 md:bg-red-700 badge-sm">
+                <span key={idx} className="badge bg-[#c63e35] md:bg-[#b51c11] badge-sm">
                   {tech}
                 </span>
               ))}
@@ -111,7 +111,7 @@ const Projects = () => {
                 href={project.demoLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-lg  bg-red-600 md:bg-red-700 hover:bg-red-900 active:scale-95 transition-transform duration-150 w-2/3 text-white"
+                className="btn btn-lg  bg-[#c63e35] md:bg-[#b51c11] hover:bg-[#79140f] active:scale-95 transition-transform duration-150 w-2/3 text-white"
               >
                 Visitez le site <Telescope className="w-4 ml-2" />
               </a>

@@ -28,7 +28,7 @@ const Footer = () => {
         {/* Logo + Contact */}
         <div className="flex flex-col items-center md:items-start">
           <a href="#">
-            <div className="flex items-center pb-5 gap-1">
+            <div className="flex items-center pb-5 gap-1 md:-ml-3">
               <Flame
                 className="w-[30px] h-[30px] md:w-[40px] md:h-[40px]"
                 strokeWidth={2}
@@ -61,7 +61,7 @@ const Footer = () => {
         </div>
 
         {/* Suivez-moi */}
-        <div className="flex flex-col items-center md:items-end gap-1 md:pt-10">
+        <div className="flex flex-col items-center md:items-end gap-1 md:pt-16">
           <p className="font-poppins font-extrabold text-lg md:text-2xl">
             SUIVEZ-MOI SUR
           </p>
@@ -90,7 +90,7 @@ const Footer = () => {
       <button
         onClick={scrollToTop}
         aria-label="Remonter en haut"
-        className="absolute right-3 bottom-0 md:right-20 md:bottom-30 flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-red-600 text-white shadow-lg hover:bg-red-800 transition"
+        className="absolute right-3 bottom-0 md:right-20 md:bottom-30 flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#b51c11] hover:bg-[#79140f]  text-white shadow-lg transition"
       >
         <ArrowUp className="w-6 h-6 md:w-7 md:h-7" />
       </button>
