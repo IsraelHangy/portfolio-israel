@@ -54,29 +54,29 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* Hamburger mobile */}
+       {/* Hamburger mobile */}
         <div className="md:hidden">
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             className="flex flex-col justify-center items-center w-10 h-10 gap-1 p-2"
           >
             <span
-              className={`block w-8 h-1 bg-white rounded transform transition-all duration-300 ease-in-out ${
-                menuOpen ? "rotate-45 translate-y-2" : ""
-              }`}
+              className={`block w-8 h-2 bg-white  transform transition-all duration-300 ease-in-out ${menuOpen ? "rotate-45 translate-y-2" : ""
+                }`}
             ></span>
             <span
-              className={`block w-8 h-1 bg-white rounded transform transition-all duration-300 ease-in-out ${
-                menuOpen ? "-rotate-45 -translate-y-2" : ""
-              }`}
+              className={`block w-8 h-2 bg-white  transform transition-all duration-300 ease-in-out ${menuOpen ? "-rotate-45 -translate-y-2" : ""
+                }`}
             ></span>
           </button>
         </div>
       </div>
 
-      {/* Mobile full-screen menu (sous la navbar) */}
+
+
+      {/* Mobile full-screen menu*/}
       <div
-        className={`md:hidden fixed top-[45px] left-0 w-full h-[calc(100%-20px)] bg-base-100 flex flex-col items-center justify-center transform transition-all duration-500 ease-in-out ${
+        className={`md:hidden fixed top-50 left-0 w-full h-[calc(100%)] bg-base-100 flex flex-col items-center justify-center transform transition-all duration-500 ease-in-out ${
           menuOpen ? "translate-y-0 opacity-100 visible" : "-translate-y-full opacity-0 invisible"
         }`}
       >
