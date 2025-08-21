@@ -1,9 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  // ⬇️ Activer le mode sombre avec une classe
+  darkMode: "class", 
+
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+
   theme: {
     extend: {
       fontFamily: {
@@ -37,12 +41,23 @@ module.exports = {
       },
     },
   },
+
   plugins: [
     require("daisyui"),
   ],
+
   daisyui: {
+    // ⬇️ Liste des thèmes disponibles
     themes: [
-      "light", "dark", "cupcake", "luxury", "dracula", "halloween", "night", "black",
+      "light",      
+      "dark",      
+      "cupcake",     
+      "luxury",      
+      "dracula",     
+      "halloween",   
+      "night",       
+      "black",
+      "autumn",
     ],
   },
 }
