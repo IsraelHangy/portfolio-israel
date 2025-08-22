@@ -203,7 +203,7 @@ const Contact = () => {
 
           <button
             type="submit"
-            className="w-full bg-[#c22e23] hover:bg-[#79140f]  text-base-content py-3 font-poppins font-semibold md:font-bold"
+            className="w-full bg-[#c22e23] hover:bg-[#79140f]  text-white py-3 font-poppins font-semibold md:font-bold"
           >
             ENVOYEZ VOTRE MESSAGE
           </button>

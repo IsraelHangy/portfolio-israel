@@ -80,11 +80,11 @@ const Projects = () => {
       <div className="mt-20 md:mt-0 md:mb-20 mb-8">
         <Title title="Mes Oeuvres" />
       </div>
-      <div className="grid md:grid-cols-3 gap-4 shadow-md">
+      <div className="grid md:grid-cols-3 gap-4">
         {projects.map((project) => (
           <motion.div
             key={project.id}
-            className="bg-base-300 p-5 h-fit rounded-xl"
+            className="bg-base-300 p-5 h-fit rounded-xl shadow-md"
             initial="initial"
             whileInView="animate"
             viewport={{ once: true, amount: 0.4 }}
@@ -101,7 +101,7 @@ const Projects = () => {
             </div>
             <div className="flex flex-wrap gap-2 my-3">
               {project.technologies.map((tech, idx) => (
-                <span key={idx} className="badge bg-[#c22e23] md:bg-[#b51c11] badge-sm">
+                <span key={idx} className="badge bg-[#c22e23] md:bg-[#b51c11] badge-sm text-white">
                   {tech}
                 </span>
               ))}
@@ -111,7 +111,7 @@ const Projects = () => {
                 href={project.demoLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-lg bg-[#c22e23] md:bg-[#b51c11] hover:bg-[#79140f]   active:scale-95 transition-transform duration-150 w-2/3"
+                className="btn btn-lg bg-[#c22e23] md:bg-[#b51c11] hover:bg-[#79140f] text-white   active:scale-95 transition-transform duration-150 w-2/3"
               >
                 Visitez le site <Telescope className="w-4 ml-2" />
               </a>
