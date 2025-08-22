@@ -58,6 +58,7 @@ module.exports = {
       "night",       
       "black",
       "autumn",
+      "cyberpunk",
     ],
   },
 }

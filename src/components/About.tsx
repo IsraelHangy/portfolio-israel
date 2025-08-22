@@ -15,32 +15,26 @@ const aboutSections = [
 const About = () => {
   return (
     <section id="About" className="scroll-mt-28">
-
-
       <div
-        className="bg-base-300 relative 
-                  bg-no-repeat bg-center
-                  bg-[length:280px] md:bg-[length:350px] 
-                  pb-10 md:pt-5 md:pb-20"
-        style={{
-          backgroundImage: "url(/graduationCap.svg)",
-        }}
+        className="bg-base-300 relative pb-10 md:pt-5 md:pb-20
+                   before:content-[''] before:absolute before:inset-0
+                   before:bg-[url('/graduationCap.svg')] 
+                   before:bg-no-repeat before:bg-center 
+                   before:bg-[length:280px] md:before:bg-[length:350px] 
+                   before:opacity-25 md:before:opacity-20 before:z-0"
       >
         {/* Titre principal */}
-        <div className="pt-10 justify-center">
+        <div className="pt-10 justify-center relative z-10">
           <Title title="À PROPOS DE MOI" />
         </div>
 
-        {/* guillemets décoratives */}
-
-        <span className="absolute top-12 left-[2%] text-[7rem] md:top-20 md:left-[13%] md:text-[10rem] text-white font-extrabold font-poppins opacity-70 select-none leading-none z-0">
+        {/* Guillemets décoratives */}
+        <span className="absolute top-12 left-[2%] text-[7rem] md:top-20 md:left-[13%] md:text-[10rem]  font-extrabold font-poppins opacity-70 select-none leading-none z-0">
           "
         </span>
-        <span className="absolute text-[7rem] right-[5%] -bottom-10 md:-bottom-10 md:right-[13%] md:text-[10rem] text-white font-extrabold font-poppins opacity-70 select-none leading-none z-0">
+        <span className="absolute text-[7rem] right-[5%] -bottom-10 md:-bottom-10 md:right-[13%] md:text-[10rem]  font-extrabold font-poppins opacity-70 select-none leading-none z-0">
           "
         </span>
-
-
 
         {/* Contenu principal */}
         <div className="p-10 relative z-10 flex justify-center">
@@ -67,3 +61,4 @@ const About = () => {
 };
 
 export default About;
+

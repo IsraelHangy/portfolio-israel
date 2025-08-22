@@ -80,11 +80,11 @@ const Projects = () => {
       <div className="mt-20 md:mt-0 md:mb-20 mb-8">
         <Title title="Mes Oeuvres" />
       </div>
-      <div className="grid md:grid-cols-3 gap-4">
+      <div className="grid md:grid-cols-3 gap-4 shadow-md">
         {projects.map((project) => (
           <motion.div
             key={project.id}
-            className="bg-base-300 p-5 h-fit rounded-xl shadow-lg"
+            className="bg-base-300 p-5 h-fit rounded-xl"
             initial="initial"
             whileInView="animate"
             viewport={{ once: true, amount: 0.4 }}
@@ -111,7 +111,7 @@ const Projects = () => {
                 href={project.demoLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-lg  bg-[#c22e23] md:bg-[#b51c11] hover:bg-[#79140f] active:scale-95 transition-transform duration-150 w-2/3 text-white"
+                className="btn btn-lg bg-[#c22e23] md:bg-[#b51c11] hover:bg-[#79140f]   active:scale-95 transition-transform duration-150 w-2/3"
               >
                 Visitez le site <Telescope className="w-4 ml-2" />
               </a>
@@ -121,7 +121,7 @@ const Projects = () => {
                 rel="noopener noreferrer"
                 className="btn btn-neutral w-1/3 ml-2 mt-1"
               >
-                <Github className="w-4" />
+                <Github className="w-4"/>
               </a>
             </div>
           </motion.div>

@@ -34,7 +34,7 @@ const Navbar = () => {
   }, [theme]);
 
   return (
-    <div className="fixed top-0 left-0 w-full z-50 bg-base-100 shadow-md">
+    <div className="fixed top-0 left-0 w-full z-50 bg-base-200 shadow-md">
       <div className="max-w-7xl mx-auto flex justify-between items-center pt-2 p-2 md:p-4">
         {/* Logo */}
         <a href="#" className="flex items-center font-extrabold text-xl md:text-2xl">
@@ -121,7 +121,7 @@ const Navbar = () => {
 
       {/* Menu mobile */}
       <div
-        className={`md:hidden fixed top-50 left-0 w-full h-[calc(100%-40px)] bg-base-100 flex flex-col items-center justify-center transform transition-all duration-500 ease-in-out ${menuOpen ? "translate-y-0 opacity-100 visible" : "-translate-y-full opacity-0 invisible"}`}
+        className={`md:hidden fixed top-50 left-0 w-full h-[calc(100%-40px)] bg-base-200 flex flex-col items-center justify-center transform transition-all duration-500 ease-in-out ${menuOpen ? "translate-y-0 opacity-100 visible" : "-translate-y-full opacity-0 invisible"}`}
       >
         <ul className="flex flex-col space-y-8 font-poppins text-3xl font-bold text-center">
           {mobileLinks.map((link) => (

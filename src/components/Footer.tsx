@@ -32,8 +32,8 @@ const Footer = () => {
               <Flame
                 className="w-[30px] h-[30px] md:w-[40px] md:h-[40px]"
                 strokeWidth={2}
-                fill="white"
-                color="white"
+               fill="currentColor"
+               color="currentColor"
               />
               <p className="font-poppins font-extrabold text-xl md:text-2xl">
                 GOOD<span className="text-red-500 pr-5">DEV</span>
@@ -82,7 +82,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="pt-8 md:pt-20 text-center font-poppins text-xs md:text-xl opacity-80">
+      <div className="pt-8 md:pt-20 text-center font-poppins text-xs md:text-xl opacity-100">
         <p>Designed & Built by Israel Hangy</p>
         <p>Copyright © {new Date().getFullYear()}</p>
       </div>
@@ -90,7 +90,7 @@ const Footer = () => {
       <button
         onClick={scrollToTop}
         aria-label="Remonter en haut"
-        className="absolute right-3 bottom-0 md:right-20 md:bottom-30 flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#c22e23] hover:bg-[#79140f]  text-white shadow-lg transition"
+        className="absolute right-3 bottom-0 md:right-20 md:bottom-30 flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#c22e23] hover:bg-[#79140f] shadow-lg transition"
       >
         <ArrowUp className="w-6 h-6 md:w-7 md:h-7" />
       </button>

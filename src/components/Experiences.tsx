@@ -93,7 +93,7 @@ const Experiences = () => {
                 whileInView: { opacity: 1, scale: 1 },
               }}
             >
-              <div className="w-24 h-24 p-2 rounded-full flex justify-center items-center border-2 border-red-500">
+              <div className="w-24 h-24 p-2 rounded-full flex justify-center items-center border-2 border-base-content">
                 <img
                   src={skill.image}
                   alt={skill.name}
@@ -110,7 +110,7 @@ const Experiences = () => {
           {experiences.map((experience, index) => (
             <motion.div
               key={experience.id}
-              className="flex flex-col md:flex-row items-center bg-base-300 p-5 rounded-xl shadow-xl"
+              className="flex flex-col md:flex-row items-center bg-base-300 p-5 rounded-xl shadow-md"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
