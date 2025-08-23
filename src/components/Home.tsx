@@ -9,13 +9,13 @@ const Home = () => {
       className="flex flex-col-reverse md:flex-row justify-center md:justify-between items-center my-20 md:my-32 opacity-0 animate-fadeIn  scroll-mt-28"
     >
       <div className="flex flex-col">
-        <h1 className="text-4xl md:text-8xl font-extrabold leading-tight text-center md:text-left mt-4">
-          <span className="text-outline inline-block overflow-visible">
+        <h1 className="text-5xl md:text-8xl font-extrabold font-poppins leading-tight text-center md:text-left mt-4">
+          <span className="text-outline">
             Salut,
           </span>
           <br />
-          <span>Je m'appelle{" "}</span>
-          <br className="block" />
+          <span className="text-outline">Je m'appelle{" "}</span>
+          <br/>
           <span className="bg-gradient-moving bg-300 bg-clip-text text-transparent animate-gradient-move">
             Israel Hangy
           </span>
