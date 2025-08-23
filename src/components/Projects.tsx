@@ -34,7 +34,7 @@ const projects = [
     id: 3,
     title: 'Gestion de Projet Twitter Clone',
     description: 'Mise en place et réalisation d’un clone de X (Twitter) en solo, en appliquant la méthodologie agile. Utilisation d’outils de gestion de projet GitHub Projects pour suivre les tâches, assurer la collaboration et garantir une progression continue et structurée.',
-    technologies: ['Git', 'Github', 'kanban', 'Agile', 'Scrum'],
+    technologies: ['Github', 'kanban', 'Agile', 'Scrum'],
     demoLink: 'https://tweeter-clone-with-adonis-js-isr-production.up.railway.app',
     repoLink: 'https://github.com/kadea-academy-learners/tweeter-clone-with-adonis-js-IsraelHangy/issues?q=is%3Aissue%20state%3Aclosed',
     image: img4,
@@ -85,8 +85,9 @@ const Projects = () => {
           <motion.div
             key={project.id}
             className="bg-base-300 p-5 h-fit rounded-xl
-             shadow-[5px_6px_5px_rgba(0,0,0,0.50)] 
-             transition-shadow duration-500 "
+             shadow-[5px_7px_8px_rgba(0,0,0,0.50)] 
+             md:hover:shadow-[10px_10px_10px_rgba(0,0,0,0.50)] 
+             transition-shadow duration-500 md:cursor-pointer "
             initial="initial"
             whileInView="animate"
             viewport={{ once: true, amount: 0.4 }}
@@ -109,7 +110,7 @@ const Projects = () => {
                 <span
                   key={idx}
                   className="badge bg-[#c22e23] md:bg-[#b51c11] badge-sm text-white
-                   shadow-[0px_5px_4px_rgba(0,0,0,0.20)] "
+                   shadow-[2px_4px_4px_rgba(0,0,0,0.20)] "
                 >
                   {tech}
                 </span>
@@ -125,7 +126,7 @@ const Projects = () => {
                 className="btn btn-lg bg-[#c22e23] md:bg-[#b51c11]
                  hover:bg-[#79140f] text-white   
                  active:scale-95 transition-transform duration-150 
-                 w-2/3 shadow-[0px_0px_5px_rgba(0,0,0,0.30)]"
+                 w-2/3 shadow-[3px_5px_5px_rgba(0,0,0,0.30)]"
               >
                 Visitez le site <Telescope className="w-4 ml-2" />
               </a>
@@ -134,7 +135,7 @@ const Projects = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-neutral w-1/3 ml-2 mt-1
-                shadow-[0px_0px_5px_rgba(0,0,0,0.30)]"
+                shadow-[4px_5px_5px_rgba(0,0,0,0.30)]"
               >
                 <Github className="w-4" />
               </a>
