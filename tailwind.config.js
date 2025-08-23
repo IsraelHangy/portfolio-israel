@@ -30,7 +30,7 @@ module.exports = {
         '300': '300% 300%',
       },
       animation: {
-        'gradient-move': 'gradientMove 7s ease infinite',
+        'gradient-move': 'gradientMove 10s ease infinite',
       },
       keyframes: {
         gradientMove: {
