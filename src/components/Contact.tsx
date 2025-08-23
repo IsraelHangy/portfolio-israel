@@ -203,7 +203,7 @@ const Contact = () => {
 
           <button
             type="submit"
-            className="w-full bg-[#c22e23] hover:bg-[#79140f]  text-white py-3 font-poppins font-semibold md:font-bold shadow-[0px_0px_5px_rgba(0,0,0,0.30)]"
+            className="w-full bg-[#c22e23] hover:bg-[#79140f]  text-white py-3 font-poppins font-semibold md:font-bold shadow-[4px_5px_5px_rgba(0,0,0,0.30)]"
           >
             ENVOYEZ VOTRE MESSAGE
           </button>
@@ -240,7 +240,7 @@ const Contact = () => {
 
                 <button
                   onClick={() => setStatus("")}
-                  className="mt-6 px-5 py-2 rounded-md text-base-content font-semibold bg-red-600 hover:bg-red-700"
+                  className="mt-6 px-5 py-2 rounded-md text-base-content font-semibold bg-red-600 hover:bg-red-700 "
                 >
                   OK
                 </button>
