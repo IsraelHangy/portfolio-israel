@@ -46,9 +46,10 @@ const Footer = () => {
           <a href="#">
             <div className="flex items-center pb-5 gap-1 md:-ml-3">
               <Flame
-                className="w-[30px] h-[30px] text-red-500"
+                className="w-[30px] h-[30px]"
                 strokeWidth={2}
                 fill="currentColor"
+                color="currentColor"
               />
               <p className="font-poppins font-extrabold text-xl md:text-2xl">
                 GOOD<span className="text-red-500 pr-5">DEV</span>
