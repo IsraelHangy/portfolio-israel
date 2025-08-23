@@ -135,7 +135,7 @@ const Projects = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-neutral w-1/3 ml-2 mt-1
-                shadow-[4px_5px_5px_rgba(0,0,0,0.30)]"
+                shadow-[5px_5px_5px_rgba(0,0,0,0.30)]"
               >
                 <Github className="w-4" />
               </a>
