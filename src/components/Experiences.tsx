@@ -103,18 +103,18 @@ const Experiences = () => {
               <div
                 className="w-24 h-24 p-2 rounded-full flex justify-center items-center 
                overflow-hidden cursor-pointer 
-               shadow-[0_6px_20px_rgba(0,0,0,0.55)] md:shadow-[0_6px_20px_rgba(0,0,0,0.55)] hover:shadow-[0_6px_20px_rgba(0,0,0,0.45)] 
-               transition-shadow duration-500"
+               shadow-[6px_3px_3px_rgba(0,0,0,0.35)] md:shadow-[5px_2px_6px_rgba(0,0,0,0.55)]
+               transition-shadow "
               >
                 <img
                   src={skill.image}
                   alt={skill.name}
                   className="object-cover rounded-full h-full w-full 
-                 transition-transform duration-500 ease-in-out md:hover:scale-110"
+                 transition-transform duration-400 ease-in"
                 />
               </div>
 
-              <span className="mt-2 text-sm font-poppins font-semibold">{skill.name}</span>
+              <span className="mt-2 text-sm font-poppins font-medium  md:font-semibold">{skill.name}</span>
             </motion.div>
 
           ))}
@@ -127,7 +127,7 @@ const Experiences = () => {
               key={experience.id}
               className="flex flex-col md:flex-row items-center 
              bg-base-300 p-5 rounded-xl 
-             shadow-[5px_7px_5px_rgba(0,0,0,0.35)] 
+             shadow-[5px_5px_5px_rgba(0,0,0,0.35)] 
              md:hover:shadow-[10px_10px_10px_rgba(0,0,0,0.35)] 
              transition-shadow duration-500 md:cursor-pointer"
               initial={{ opacity: 0, y: 50 }}

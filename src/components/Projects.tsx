@@ -85,7 +85,7 @@ const Projects = () => {
           <motion.div
             key={project.id}
             className="bg-base-300 p-5 h-fit rounded-xl
-             shadow-[5px_7px_8px_rgba(0,0,0,0.50)] 
+             shadow-[5px_5px_5px_rgba(0,0,0,0.35)] 
              md:hover:shadow-[10px_10px_10px_rgba(0,0,0,0.50)] 
              transition-shadow duration-500 md:cursor-pointer "
             initial="initial"

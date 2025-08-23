@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { motion, easeOut } from "framer-motion";
 import { Flame, Facebook, Github, Linkedin, Twitter, ArrowUp, Mail, Phone, MapPin } from "lucide-react";
 
@@ -6,14 +7,29 @@ const footerVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.8, ease: easeOut }
+    transition: { duration: 0.8, ease: easeOut },
   },
 };
 
 const Footer = () => {
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        setShowScrollTop(true);
+      } else {
+        setShowScrollTop(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <motion.footer
@@ -23,17 +39,16 @@ const Footer = () => {
       viewport={{ once: true, amount: 0.3 }}
       variants={footerVariants}
     >
+      {/* --- Haut du footer --- */}
       <div className="flex flex-col md:flex-row justify-between w-full items-center md:items-start gap-6 md:gap-0 text-center md:text-left">
-        
         {/* Logo + Contact */}
         <div className="flex flex-col items-center md:items-start">
           <a href="#">
             <div className="flex items-center pb-5 gap-1 md:-ml-3">
               <Flame
-                className="w-[30px] h-[30px]"
+                className="w-[30px] h-[30px] text-red-500"
                 strokeWidth={2}
-               fill="currentColor"
-               color="currentColor"
+                fill="currentColor"
               />
               <p className="font-poppins font-extrabold text-xl md:text-2xl">
                 GOOD<span className="text-red-500 pr-5">DEV</span>
@@ -47,11 +62,17 @@ const Footer = () => {
           <div className="flex flex-col md:pt-2 pt-1 gap-2 text-center md:text-left">
             <div className="text-sm md:text-xl font-poppins flex items-center gap-2 justify-center md:justify-start">
               <Mail className="hidden md:inline-block w-6 h-6 text-red-500" />
-              israelngeve950@gmail.com
+              <a
+                href="mailto:israelngeve950@gmai.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                israelngeve950@gmai.com
+              </a>
             </div>
             <div className="text-sm md:text-xl font-poppins flex items-center gap-2 justify-center md:justify-start">
               <Phone className="hidden md:inline-block w-6 h-6 text-red-500" />
-              +243974115802
+              <a href="tel:+243974115802">+243974115802</a>
             </div>
             <div className="text-sm md:text-xl font-poppins flex items-center gap-2 justify-center md:justify-start">
               <MapPin className="hidden md:inline-block w-6 h-6 text-red-500" />
@@ -61,16 +82,16 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Suivez-moi */}
+        {/* Réseaux */}
         <div className="flex flex-col items-center md:items-end gap-1 md:pt-16">
           <p className="font-poppins font-extrabold text-lg md:text-2xl">
             SUIVEZ-MOI SUR
           </p>
           <div className="flex gap-6 md:pt-2 pt-1">
-            <a href="https://x.com/IsraelNgeve?t=RSze1kboTwadGK35AsIcjg&s=09" target="_blank" rel="noopener noreferrer">
+            <a href="https://x.com/IsraelNgeve" target="_blank" rel="noopener noreferrer">
               <Twitter className="w-6 h-6 md:w-8 md:h-8 hover:text-red-500 transition" />
             </a>
-            <a href="https://github.com/IsraelHangy?tab=repositories" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/IsraelHangy" target="_blank" rel="noopener noreferrer">
               <Github className="w-6 h-6 md:w-8 md:h-8 hover:text-red-500 transition" />
             </a>
             <a href="https://www.facebook.com/israel.hangy" target="_blank" rel="noopener noreferrer">
@@ -83,18 +104,26 @@ const Footer = () => {
         </div>
       </div>
 
+      {/* Copyright */}
       <div className="pt-8 md:pt-20 text-center font-poppins text-xs md:text-xl opacity-100">
         <p>Designed & Built by Israel Hangy</p>
         <p>Copyright © {new Date().getFullYear()}</p>
       </div>
 
-      <button
-        onClick={scrollToTop}
-        aria-label="Remonter en haut"
-        className="absolute right-3 bottom-0 md:right-20 md:bottom-30 flex items-center  text-white justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#c22e23] hover:bg-[#79140f] shadow-[0px_6px_5px_rgba(0,0,0,0.35)] transition"
-      >
-        <ArrowUp className="w-6 h-6 md:w-7 md:h-7" />
-      </button>
+      {/* Bouton Scroll */}
+      {showScrollTop && (
+        <motion.button
+          onClick={scrollToTop}
+          aria-label="Remonter en haut"
+          className="fixed right-3 bottom-5 md:right-10 md:bottom-10 flex items-center text-white justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#c22e23] hover:bg-[#79140f] shadow-[0px_6px_5px_rgba(0,0,0,0.35)]"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.8 }}
+          transition={{ duration: 0.3 }}
+        >
+          <ArrowUp className="w-6 h-6 md:w-7 md:h-7" />
+        </motion.button>
+      )}
     </motion.footer>
   );
 };
