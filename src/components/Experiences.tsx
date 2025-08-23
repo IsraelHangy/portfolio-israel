@@ -101,7 +101,7 @@ const Experiences = () => {
               }}
             >
               <div
-                className="w-24 h-24 p-2 rounded-full flex justify-center items-center 
+                className="w-20 h-20 md:w-24 md:h-24 rounded-full flex justify-center items-center 
                overflow-hidden cursor-pointer 
                shadow-[6px_3px_3px_rgba(0,0,0,0.35)] md:shadow-[5px_2px_6px_rgba(0,0,0,0.55)]
                transition-shadow "
@@ -109,7 +109,7 @@ const Experiences = () => {
                 <img
                   src={skill.image}
                   alt={skill.name}
-                  className="object-cover rounded-full h-full w-full 
+                  className="object-cover rounded-full  h-full w-full 
                  transition-transform duration-400 ease-in"
                 />
               </div>

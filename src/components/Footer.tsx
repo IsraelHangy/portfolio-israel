@@ -1,6 +1,16 @@
 import { useState, useEffect } from "react";
-import { motion, easeOut } from "framer-motion";
-import { Flame, Facebook, Github, Linkedin, Twitter, ArrowUp, Mail, Phone, MapPin } from "lucide-react";
+import { motion, AnimatePresence, easeOut } from "framer-motion";
+import {
+  Flame,
+  Facebook,
+  Github,
+  Linkedin,
+  Twitter,
+  ArrowUp,
+  Mail,
+  Phone,
+  MapPin,
+} from "lucide-react";
 
 const footerVariants = {
   hidden: { opacity: 0, y: 50 },
@@ -20,12 +30,10 @@ const Footer = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 300) {
-        setShowScrollTop(true);
-      } else {
-        setShowScrollTop(false);
-      }
+      setShowScrollTop(window.scrollY > 150);
     };
+
+    requestAnimationFrame(handleScroll);
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -89,16 +97,32 @@ const Footer = () => {
             SUIVEZ-MOI SUR
           </p>
           <div className="flex gap-6 md:pt-2 pt-1">
-            <a href="https://x.com/IsraelNgeve" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://x.com/IsraelNgeve"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Twitter className="w-6 h-6 md:w-8 md:h-8 hover:text-red-500 transition" />
             </a>
-            <a href="https://github.com/IsraelHangy" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://github.com/IsraelHangy"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Github className="w-6 h-6 md:w-8 md:h-8 hover:text-red-500 transition" />
             </a>
-            <a href="https://www.facebook.com/israel.hangy" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.facebook.com/israel.hangy"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Facebook className="w-6 h-6 md:w-8 md:h-8 hover:text-red-500 transition" />
             </a>
-            <a href="https://www.linkedin.com/in/israel-ngevessisse" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.linkedin.com/in/israel-ngevessisse"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Linkedin className="w-6 h-6 md:w-8 md:h-8 hover:text-red-500 transition" />
             </a>
           </div>
@@ -112,19 +136,21 @@ const Footer = () => {
       </div>
 
       {/* Bouton Scroll */}
-      {showScrollTop && (
-        <motion.button
-          onClick={scrollToTop}
-          aria-label="Remonter en haut"
-          className="fixed right-3 bottom-5 md:right-10 md:bottom-10 flex items-center text-white justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#c22e23] hover:bg-[#79140f] shadow-[0px_6px_5px_rgba(0,0,0,0.35)]"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 0.8 }}
-          transition={{ duration: 0.3 }}
-        >
-          <ArrowUp className="w-6 h-6 md:w-7 md:h-7" />
-        </motion.button>
-      )}
+      <AnimatePresence>
+        {showScrollTop && (
+          <motion.button
+            onClick={scrollToTop}
+            aria-label="Remonter en haut"
+            className="fixed right-3 bottom-5 md:right-10 md:bottom-10 flex items-center text-white justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#c22e23] hover:bg-[#79140f] shadow-[0px_6px_5px_rgba(0,0,0,0.35)]"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.8 }}
+            transition={{ duration: 0.3 }}
+          >
+            <ArrowUp className="w-6 h-6 md:w-7 md:h-7" />
+          </motion.button>
+        )}
+      </AnimatePresence>
     </motion.footer>
   );
 };
