@@ -15,7 +15,7 @@ const projects = [
   {
     id: 1,
     title: 'Projet Portfolio',
-    description:'Création d’un site web statique en HTML et CSS dans le cadre de mes premières semaines de formation à Kadea. Ce projet m’a permis d’apprendre à structurer une page web et à la styliser, en mettant en pratique les bases du développement front-end',
+    description: 'Création d’un site web statique en HTML et CSS dans le cadre de mes premières semaines de formation à Kadea. Ce projet m’a permis d’apprendre à structurer une page web et à la styliser, en mettant en pratique les bases du développement front-end',
     technologies: ['HTML', 'CSS', 'Responsive'],
     demoLink: 'https://israelhangy.github.io/portfolio-project-Israel/',
     repoLink: 'https://github.com/IsraelHangy/portfolio-project-Israel',
@@ -34,7 +34,7 @@ const projects = [
     id: 3,
     title: 'Gestion de Projet Twitter Clone',
     description: 'Mise en place et réalisation d’un clone de X (Twitter) en solo, en appliquant la méthodologie agile. Utilisation d’outils de gestion de projet GitHub Projects pour suivre les tâches, assurer la collaboration et garantir une progression continue et structurée.',
-    technologies: ['Git', 'Github', 'kanban', 'Agile','Scrum'],
+    technologies: ['Git', 'Github', 'kanban', 'Agile', 'Scrum'],
     demoLink: 'https://tweeter-clone-with-adonis-js-isr-production.up.railway.app',
     repoLink: 'https://github.com/kadea-academy-learners/tweeter-clone-with-adonis-js-IsraelHangy/issues?q=is%3Aissue%20state%3Aclosed',
     image: img4,
@@ -84,7 +84,9 @@ const Projects = () => {
         {projects.map((project) => (
           <motion.div
             key={project.id}
-            className="bg-base-300 p-5 h-fit rounded-xl shadow-md"
+            className="bg-base-300 p-5 h-fit rounded-xl
+             shadow-[5px_6px_5px_rgba(0,0,0,0.50)] 
+             transition-shadow duration-500 "
             initial="initial"
             whileInView="animate"
             viewport={{ once: true, amount: 0.4 }}
@@ -95,23 +97,35 @@ const Projects = () => {
               alt={project.title}
               className="w-full rounded-xl h-56 object-cover"
             />
+
             <div>
               <h1 className="my-2 font-bold font-poppins">{project.title}</h1>
               <p className="text-sm font-poppins">{project.description}</p>
             </div>
+
+            {/* Badges */}
             <div className="flex flex-wrap gap-2 my-3">
               {project.technologies.map((tech, idx) => (
-                <span key={idx} className="badge bg-[#c22e23] md:bg-[#b51c11] badge-sm text-white">
+                <span
+                  key={idx}
+                  className="badge bg-[#c22e23] md:bg-[#b51c11] badge-sm text-white
+                   shadow-[0px_5px_4px_rgba(0,0,0,0.20)] "
+                >
                   {tech}
                 </span>
               ))}
             </div>
+
+            {/* Boutons */}
             <div className="flex">
               <a
                 href={project.demoLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-lg bg-[#c22e23] md:bg-[#b51c11] hover:bg-[#79140f] text-white   active:scale-95 transition-transform duration-150 w-2/3"
+                className="btn btn-lg bg-[#c22e23] md:bg-[#b51c11]
+                 hover:bg-[#79140f] text-white   
+                 active:scale-95 transition-transform duration-150 
+                 w-2/3 shadow-[0px_0px_5px_rgba(0,0,0,0.30)]"
               >
                 Visitez le site <Telescope className="w-4 ml-2" />
               </a>
@@ -119,12 +133,15 @@ const Projects = () => {
                 href={project.repoLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-neutral w-1/3 ml-2 mt-1"
+                className="btn btn-neutral w-1/3 ml-2 mt-1
+                shadow-[0px_0px_5px_rgba(0,0,0,0.30)]"
               >
-                <Github className="w-4"/>
+                <Github className="w-4" />
               </a>
             </div>
           </motion.div>
+
+
         ))}
       </div>
     </div>

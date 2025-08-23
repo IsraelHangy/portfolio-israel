@@ -40,7 +40,7 @@ const Navbar = () => {
         <a href="#" className="flex items-center font-extrabold text-xl md:text-2xl">
           <div className="flex items-center gap-1 md:-ml-20">
             <Flame
-              className="w-[30px] h-[30px] md:w-[40px] md:h-[40px]"
+              className="w-[30px] h-[30px] "
               strokeWidth={2}
               fill="currentColor"
               color="currentColor"

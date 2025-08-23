@@ -30,7 +30,7 @@ const Footer = () => {
           <a href="#">
             <div className="flex items-center pb-5 gap-1 md:-ml-3">
               <Flame
-                className="w-[30px] h-[30px] md:w-[40px] md:h-[40px]"
+                className="w-[30px] h-[30px]"
                 strokeWidth={2}
                fill="currentColor"
                color="currentColor"
@@ -55,7 +55,8 @@ const Footer = () => {
             </div>
             <div className="text-sm md:text-xl font-poppins flex items-center gap-2 justify-center md:justify-start">
               <MapPin className="hidden md:inline-block w-6 h-6 text-red-500" />
-              Kinshasa, <span className="font-semibold text-red-500">RDC</span>
+              Kinshasa,
+              <span className="font-bold text-red-500">RDC</span>
             </div>
           </div>
         </div>

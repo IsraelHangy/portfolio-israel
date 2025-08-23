@@ -15,20 +15,26 @@ import imgWORDPRESS from "../assets/techno/wordpress.svg";
 import imgVUE from "../assets/techno/vue.png";
 import imgCANVA from "../assets/techno/canva.png";
 import imgADONIS from "../assets/techno/adonis.js.svg";
+import imgGit from "../assets/techno/git.png";
+import imgGithub from "../assets/techno/github.png";
+import imgVscode from "../assets/techno/vscode.png";
 
 const skills = [
   { id: 1, name: "HTML", image: imgHTML },
   { id: 2, name: "CSS", image: imgCSS },
   { id: 3, name: "JavaScript", image: imgJS },
-  { id: 4, name: "React", image: imgREACT },
+  { id: 4, name: "Tailwind CSS", image: imgTAILWIND },
   { id: 5, name: "Vue.js", image: imgVUE },
-  { id: 6, name: "Tailwind CSS", image: imgTAILWIND },
+  { id: 6, name: "React.js", image: imgREACT },
   { id: 7, name: "TypeScript", image: imgTYPE },
-  { id: 8, name: "Node.js", image: imgNODE },
-  { id: 9, name: "Adonis.js", image: imgADONIS },
+  { id: 8, name: "Adonis.js", image: imgADONIS },
+  { id: 9, name: "Node.js", image: imgNODE },
   { id: 10, name: "Wordpress", image: imgWORDPRESS },
   { id: 11, name: "Figma", image: imgFIGMA },
   { id: 12, name: "Canva", image: imgCANVA },
+  { id: 13, name: "Git", image: imgGit },
+  { id: 14, name: "Github", image: imgGithub },
+  { id: 15, name: "Vscode", image: imgVscode },
 ];
 
 const experiences = [
@@ -53,7 +59,7 @@ const experiences = [
       "Je m’efforce de concevoir des interfaces utilisateurs à la fois intuitives, esthétiques et fonctionnelles. Mon objectif est de créer des expériences qui captivent l’utilisateur dès le premier regard tout en assurant une navigation fluide et naturelle, grâce à une forte maîtrise des principes visuels et ergonomiques.",
     icon: <Palette className="text-red-500 scale-150" />,
   },
-   {
+  {
     id: 4,
     title: "Gestion de projet",
     description:
@@ -79,7 +85,8 @@ const Experiences = () => {
           {skills.map((skill, index) => (
             <motion.div
               key={skill.id}
-              className="flex justify-center items-center flex-col"
+              className="flex justify-center items-center flex-col 
+             hover:-translate-y-2 transition-transform duration-500 ease-in-out"
               initial="initial"
               whileInView="whileInView"
               viewport={{ once: true, amount: 0.5 }}
@@ -93,38 +100,51 @@ const Experiences = () => {
                 whileInView: { opacity: 1, scale: 1 },
               }}
             >
-              <div className="w-24 h-24 p-2 rounded-full flex justify-center items-center border-2 border-base-content">
+              <div
+                className="w-24 h-24 p-2 rounded-full flex justify-center items-center 
+               overflow-hidden cursor-pointer 
+               shadow-[0_6px_20px_rgba(0,0,0,0.55)] md:shadow-[0_6px_20px_rgba(0,0,0,0.55)] hover:shadow-[0_6px_20px_rgba(0,0,0,0.45)] 
+               transition-shadow duration-500"
+              >
                 <img
                   src={skill.image}
                   alt={skill.name}
-                  className="object-cover rounded-full h-full w-full"
+                  className="object-cover rounded-full h-full w-full 
+                 transition-transform duration-500 ease-in-out md:hover:scale-110"
                 />
               </div>
-              <span className="mt-2 text-sm">{skill.name}</span>
+
+              <span className="mt-2 text-sm font-poppins font-semibold">{skill.name}</span>
             </motion.div>
+
           ))}
         </div>
 
         {/* Bloc des expériences */}
-        <div className="md:ml-4 flex flex-col space-y-4 md:w-2/3">
+        <div className="md:ml-20 flex flex-col space-y-4 md:w-[60%] w-full">
           {experiences.map((experience, index) => (
             <motion.div
               key={experience.id}
-              className="flex flex-col md:flex-row items-center bg-base-300 p-5 rounded-xl shadow-md"
+              className="flex flex-col md:flex-row items-center 
+             bg-base-300 p-5 rounded-xl 
+             shadow-[5px_7px_5px_rgba(0,0,0,0.35)] 
+             md:hover:shadow-[10px_10px_10px_rgba(0,0,0,0.35)] 
+             transition-shadow duration-500 md:cursor-pointer"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
               viewport={{ once: true }}
             >
               {/* Icône */}
-              <div className="mb-3 md:mb-2">{experience.icon}</div>
+              <div className="mb-3 md:mt-10">{experience.icon}</div>
 
               {/* Texte */}
               <div className="md:ml-4 text-center md:text-left font-poppins">
-                <h2 className="text-xl font-extrabold mb-2">{experience.title}</h2>
-                <p className="text-sm md:text-lg font-poppins">{experience.description}</p>
+                <h2 className="text-xl md:text-2xl font-extrabold mb-2">{experience.title}</h2>
+                <p className="text-sm md:text-xl font-poppins">{experience.description}</p>
               </div>
             </motion.div>
+
           ))}
         </div>
       </div>
