@@ -101,7 +101,7 @@ const Experiences = () => {
               }}
             >
               <div
-                className="w-20 h-20 md:w-24 md:h-24 rounded-full flex justify-center items-center 
+                className="w-[75px] h-[75px] md:w-24 md:h-24 rounded-full flex justify-center items-center 
                overflow-hidden cursor-pointer 
                shadow-[6px_3px_3px_rgba(0,0,0,0.35)] md:shadow-[5px_2px_6px_rgba(0,0,0,0.55)]
                transition-shadow "
