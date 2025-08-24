@@ -110,7 +110,7 @@ const Projects = () => {
                 <span
                   key={idx}
                   className="badge bg-[#c22e23] md:bg-[#b51c11] badge-sm text-white
-                   shadow-[2px_4px_4px_rgba(0,0,0,0.20)] "
+                   shadow-[2px_2px_2px_rgba(0,0,0,0.25)] "
                 >
                   {tech}
                 </span>
@@ -126,7 +126,7 @@ const Projects = () => {
                 className="btn btn-lg bg-[#c22e23] md:bg-[#b51c11]
                  hover:bg-[#79140f] text-white   
                  active:scale-95 transition-transform duration-150 
-                 w-2/3 shadow-[3px_5px_5px_rgba(0,0,0,0.30)]"
+                 w-2/3 shadow-[3px_3px_4px_rgba(0,0,0,0.35)]"
               >
                 Visitez le site <Telescope className="w-4 ml-2" />
               </a>
@@ -135,7 +135,7 @@ const Projects = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-neutral w-1/3 ml-2 mt-1
-                shadow-[5px_5px_5px_rgba(0,0,0,0.30)]"
+                shadow-[3px_3px_4px_rgba(0,0,0,0.35)]"
               >
                 <Github className="w-4" />
               </a>

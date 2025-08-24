@@ -141,7 +141,7 @@ const Footer = () => {
           <motion.button
             onClick={scrollToTop}
             aria-label="Remonter en haut"
-            className="fixed right-3 bottom-5 md:right-10 md:bottom-10 flex items-center text-white justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#c22e23] hover:bg-[#79140f] shadow-[0px_6px_5px_rgba(0,0,0,0.35)]"
+            className="fixed right-3 bottom-5 md:right-10 md:bottom-10 flex items-center text-white justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#c22e23] hover:bg-[#79140f] shadow-[3px_3px_4px_rgba(0,0,0,0.35)]"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}
