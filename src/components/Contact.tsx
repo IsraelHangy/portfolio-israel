@@ -187,7 +187,7 @@ const Contact = () => {
           </div>
 
           <div className="mb-8">
-            <label className="block text-base-content text-sm md:text-xl font-poppins font-bold mb-2">
+            <label className="block text-base-content text-sm md:text-xl font-poppins font-bold  mb-2">
               VOTRE MESSAGE
             </label>
             <textarea
@@ -203,7 +203,7 @@ const Contact = () => {
 
           <button
             type="submit"
-            className="w-full bg-[#c22e23] hover:bg-[#79140f]  text-white py-3 font-poppins font-semibold md:font-bold shadow-[3px_3px_4px_rgba(0,0,0,0.35)]"
+            className="w-full bg-[#c22e23] hover:bg-[#79140f]  text-white py-3 font-poppins font-semibold md:font-extrabold shadow-[3px_3px_4px_rgba(0,0,0,0.30)]"
           >
             ENVOYEZ VOTRE MESSAGE
           </button>

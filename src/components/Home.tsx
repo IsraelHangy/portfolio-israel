@@ -29,7 +29,7 @@ const Home = () => {
         <div className="flex justify-center md:justify-start space-x-4 md:mt-8 mt-6">
           <a
             href="#Contact"
-            className="btn btn-lg bg-red-500 hover:bg-red-600 text-black rounded-lg md:w-fit  shadow-[3px_3px_4px_rgba(0,0,0,0.35)]"
+            className="btn btn-lg bg-red-500 hover:bg-red-600 text-black rounded-lg md:w-fit  shadow-[2px_2px_3px_rgba(0,0,0,0.30)]"
           >
             <Mail className="w-5 h-5" />
             Contactez-moi
@@ -39,7 +39,7 @@ const Home = () => {
             href={cvPDF}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn btn-lg bg-red-500 hover:bg-red-600 text-black rounded-lg md:w-fit flex items-center space-x-2  shadow-[3px_3px_4px_rgba(0,0,0,0.35)]"
+            className="btn btn-lg bg-red-500 hover:bg-red-600 text-black rounded-lg md:w-fit flex items-center space-x-2  shadow-[2px_2px_3px_rgba(0,0,0,0.30)]"
           >
             <FileText className="w-5 h-5" />
             <span>Mon CV</span>

@@ -1,12 +1,10 @@
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence, easeOut } from "framer-motion";
+import { motion, easeOut } from "framer-motion";
 import {
   Flame,
   Facebook,
   Github,
   Linkedin,
   Twitter,
-  ArrowUp,
   Mail,
   Phone,
   MapPin,
@@ -22,22 +20,6 @@ const footerVariants = {
 };
 
 const Footer = () => {
-  const [showScrollTop, setShowScrollTop] = useState(false);
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setShowScrollTop(window.scrollY > 150);
-    };
-
-    requestAnimationFrame(handleScroll);
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   return (
     <motion.footer
@@ -134,23 +116,7 @@ const Footer = () => {
         <p>Designed & Built by Israel Hangy</p>
         <p>Copyright © {new Date().getFullYear()}</p>
       </div>
-
-      {/* Bouton Scroll */}
-      <AnimatePresence>
-        {showScrollTop && (
-          <motion.button
-            onClick={scrollToTop}
-            aria-label="Remonter en haut"
-            className="fixed right-3 bottom-5 md:right-10 md:bottom-10 flex items-center text-white justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#c22e23] hover:bg-[#79140f] shadow-[3px_3px_4px_rgba(0,0,0,0.35)]"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.8 }}
-            transition={{ duration: 0.3 }}
-          >
-            <ArrowUp className="w-6 h-6 md:w-7 md:h-7" />
-          </motion.button>
-        )}
-      </AnimatePresence>
+ 
     </motion.footer>
   );
 };

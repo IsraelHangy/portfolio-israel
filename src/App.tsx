@@ -5,6 +5,8 @@ import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
+import ScrollToTopButton from "./components/ScrollToTopButton";
+
 
 export default function App() {
   return (
@@ -18,8 +20,9 @@ export default function App() {
         <Experiences />
         <Projects />
       </div>
-      <Contact/>
+      <Contact />
       <Footer />
+      <ScrollToTopButton />
     </div>
   );
 }

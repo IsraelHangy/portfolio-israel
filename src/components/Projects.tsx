@@ -4,7 +4,7 @@ import type { Variants } from "framer-motion";
 
 
 import img1 from '../assets/projects/1.jpg';
-import img2 from '../assets/projects/2.png';
+import img2 from '../assets/projects/2.jpg';
 import img3 from '../assets/projects/3.png';
 import img4 from '../assets/projects/4.jpg';
 import img5 from '../assets/projects/5.png';
@@ -85,8 +85,8 @@ const Projects = () => {
           <motion.div
             key={project.id}
             className="bg-base-300 p-5 h-fit rounded-xl
-             shadow-[5px_5px_5px_rgba(0,0,0,0.35)] 
-             md:hover:shadow-[10px_10px_10px_rgba(0,0,0,0.50)] 
+             shadow-[4px_4px_4px_rgba(0,0,0,0.30)] 
+             md:hover:shadow-[5px_5px_5px_rgba(0,0,0,0.40)] 
              transition-shadow duration-500 md:cursor-pointer "
             initial="initial"
             whileInView="animate"
