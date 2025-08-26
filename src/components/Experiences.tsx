@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Title from "./Title";
 import { motion } from "framer-motion";
 import { CodeXml, Server, DatabaseBackup, LandPlot, Palette, Wrench } from "lucide-react";
@@ -29,7 +29,6 @@ import imgGithub from "../assets/techno/github.png";
 import imgVscode from "../assets/techno/vscode.png";
 import imgWindsurf from "../assets/techno/windsurf.svg";
 import imgNetlify from "../assets/techno/netlify.svg";
-
 
 // === Données des skills ===
 const skills = [
@@ -72,8 +71,7 @@ const experiences = [
     icon: <Server className="text-red-500 scale-150 md:w-7 md:h-7" />
   },
   {
-    id: 3,
-    title: "Gestion de Bases de données",
+    id: 3, title: "Gestion de Bases de données",
     description: "Capable de concevoir, gérer et optimiser des bases de données relationnelles telles que PostgreSQL, MySQL et Oracle. J’assure la structuration efficace des données, la sécurité et la performance, tout en garantissant leur intégrité et leur scalabilité.",
     icon: <DatabaseBackup className="text-red-500 scale-150 md:w-7 md:h-7" />
   },
@@ -94,6 +92,57 @@ const experiences = [
   },
 ];
 
+// === Composant Counter ===
+interface CounterProps {
+  target: number;
+  duration?: number;
+  plusSign?: boolean; 
+}
+
+const CounterOnView = ({ target, duration = 1500, plusSign = false }: CounterProps) => {
+  const [count, setCount] = useState(0);
+  const [visible, setVisible] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!visible) return;
+
+    let start = 0;
+    const increment = target / (duration / 20);
+    const timer = setInterval(() => {
+      start += increment;
+      if (start >= target) {
+        start = target;
+        clearInterval(timer);
+      }
+      setCount(Math.floor(start));
+    }, 20);
+
+    return () => clearInterval(timer);
+  }, [visible, target, duration]);
+
+  return (
+    <div ref={ref}>
+      {count}
+      {plusSign && "+"}
+    </div>
+  );
+};
 
 const categories = ["Toutes", "Frontend", "Backend", "Bases de données", "Design", "Projet", "Outils"];
 
@@ -137,7 +186,6 @@ const Experiences = () => {
       </div>
 
       <div className="flex flex-col-reverse md:flex-row gap-10">
-
         {/* === Skills === */}
         <div
           id="Skills"
@@ -153,16 +201,15 @@ const Experiences = () => {
               className="group relative flex flex-col items-center p-3  
               bg-base-300 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 
               rounded-xl shadow-[3px_3px_3px_rgba(0,0,0,0.30)] 
-              hover:-translate-y-2 hover:shadow-[4px_4px_5px_rgba(0,0,0,0.40)] hover:scale-110
+              hover:-translate-y-2 md:hover:shadow-[4px_4px_5px_rgba(0,0,0,0.40)] hover:scale-110
               transition-all duration-500 cursor-pointer md:h-[140px]"
-              >
-              {/* Cercle avec logo */}
+            >
+          
               <div
                 className="p-4 rounded-full relative transition-all duration-300 group-hover:scale-110"
                 style={{ backgroundColor: `${skill.color}20` }}
               >
                 <img src={skill.image} alt={skill.name} className="w-[48px] h-[48px]" />
-                {/* Petit rond couleur officielle */}
                 <div
                   className="absolute -top-1 -right-2 w-3 h-3 rounded-full border-2 border-white dark:border-gray-900"
                   style={{ backgroundColor: skill.color }}
@@ -203,55 +250,63 @@ const Experiences = () => {
         </div>
       </div>
 
-      {/* === Bloc Résumé / Stats === */}
+      {/* === Bloc Résumé avec compteur === */}
       <div className="max-w-5xl mx-auto mt-20 md:mt-28 text-center">
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 ">
-          <div className="bg-base-300 border border-gray-200
-              dark:bg-blue-900/50 p-4 rounded-lg
-              shadow-[3px_3px_3px_rgba(0,0,0,0.30)] 
-              hover:-translate-y-1 hover:shadow-[4px_4px_5px_rgba(0,0,0,0.40)]
-              transition-all duration-500 cursor-pointer">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+          <div className="bg-base-300 border border-gray-200 dark:bg-blue-900/50 p-4 rounded-lg
+      shadow-[3px_3px_3px_rgba(0,0,0,0.30)] hover:-translate-y-1 hover:shadow-[4px_4px_5px_rgba(0,0,0,0.40)]
+      transition-all duration-500 cursor-pointer">
             <a href="#Skills">
-              <div className="text-2xl md:text-4xl font-bold  font-poppins text-blue-600 dark:text-blue-400">15+</div>
-              <div className="text-base text-base-content font-medium md:font-semibold font-poppins dark:text-gray-300">Technologies</div>
+              <div className="text-2xl md:text-4xl font-bold font-poppins text-blue-600 dark:text-blue-400">
+                <CounterOnView target={15} plusSign />
+              </div>
+              <div className="text-base text-base-content font-medium md:font-semibold font-poppins dark:text-gray-300">
+                Technologies
+              </div>
             </a>
           </div>
 
           <div className="bg-base-300 border border-gray-200 dark:bg-green-900/50 p-4 rounded-lg
-              shadow-[3px_3px_3px_rgba(0,0,0,0.30)] 
-              hover:-translate-y-1 hover:shadow-[4px_4px_5px_rgba(0,0,0,0.40)]
-              transition-all duration-500 cursor-pointer">
+      shadow-[3px_3px_3px_rgba(0,0,0,0.30)] hover:-translate-y-1 hover:shadow-[4px_4px_5px_rgba(0,0,0,0.40)]
+      transition-all duration-500 cursor-pointer">
             <a href="#Home">
-              <div className="text-2xl md:text-4xl font-bold  font-poppins text-green-600 dark:text-green-400">4+</div>
-              <div className="text-base text-base-content font-medium md:font-semibold font-poppins dark:text-gray-300">Années d'expériences</div>
+              <div className="text-2xl md:text-4xl font-bold font-poppins text-green-600 dark:text-green-400">
+                <CounterOnView target={4} plusSign />
+              </div>
+              <div className="text-base text-base-content font-medium md:font-semibold font-poppins dark:text-gray-300">
+                Années d'expériences
+              </div>
             </a>
           </div>
 
           <div className="bg-base-300 border border-gray-200 dark:bg-purple-900/50 p-4 rounded-lg
-           shadow-[3px_3px_3px_rgba(0,0,0,0.30)] 
-              hover:-translate-y-1 hover:shadow-[4px_4px_5px_rgba(0,0,0,0.40)]
-              transition-all duration-500 cursor-pointer">
+      shadow-[3px_3px_3px_rgba(0,0,0,0.30)] hover:-translate-y-1 hover:shadow-[4px_4px_5px_rgba(0,0,0,0.40)]
+      transition-all duration-500 cursor-pointer">
             <a href="#Experiences">
-              <div className="text-2xl md:text-4xl font-bold  font-poppins text-red-600 dark:text-purple-400">6</div>
-              <div className="text-base text-base-content font-medium md:font-semibold font-poppins dark:text-gray-300">Catégories</div>
+              <div className="text-2xl md:text-4xl font-bold font-poppins text-red-600 dark:text-purple-400">
+                <CounterOnView target={6} plusSign />
+              </div>
+              <div className="text-base text-base-content font-medium md:font-semibold font-poppins dark:text-gray-300">
+                Catégories
+              </div>
             </a>
           </div>
 
           <div className="bg-base-300 border border-gray-200 dark:bg-orange-900/50 p-4 rounded-lg
-             shadow-[3px_3px_3px_rgba(0,0,0,0.30)] 
-              hover:-translate-y-1 hover:shadow-[4px_4px_5px_rgba(0,0,0,0.40)]
-              transition-all duration-500 cursor-pointer">
+      shadow-[3px_3px_3px_rgba(0,0,0,0.30)] hover:-translate-y-1 hover:shadow-[4px_4px_5px_rgba(0,0,0,0.40)]
+      transition-all duration-500 cursor-pointer">
             <a href="#Projects">
-              <div className="text-2xl md:text-4xl font-bold  font-poppins text-orange-600 dark:text-orange-400">4+</div>
-              <div className="text-base text-base-content font-medium md:font-semibold font-poppins dark:text-gray-300">Projets livrés</div>
+              <div className="text-2xl md:text-4xl font-bold font-poppins text-orange-600 dark:text-orange-400">
+                <CounterOnView target={4} plusSign />
+              </div>
+              <div className="text-base text-base-content font-medium md:font-semibold font-poppins dark:text-gray-300">
+                Projets livrés
+              </div>
             </a>
-
           </div>
         </div>
       </div>
     </div>
-
-
   );
 };
 

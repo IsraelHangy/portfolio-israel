@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Flame, Moon, Sun } from "lucide-react";
+import cvPDF from "../assets/CV_Israel.pdf";
 
 const Navbar = () => {
   const [active, setActive] = useState<string>("Home");
@@ -14,6 +15,13 @@ const Navbar = () => {
     { name: "Contact", href: "#Contact", id: "Contact" },
   ];
 
+  const mobileLinks = [
+    { name: "A propos", href: "#About" },
+    { name: "Compétences", href: "#Experiences" },
+    { name: "Oeuvres", href: "#Projects" },
+    { name: "Obtenir mon CV", href: cvPDF, external: true },
+    { name: "Contactez-moi", href: "#Contact" },
+  ];
 
   // Bloquer le scroll quand menu ouvert
   useEffect(() => {
@@ -25,7 +33,7 @@ const Navbar = () => {
     document.documentElement.setAttribute("data-theme", theme);
   }, [theme]);
 
-  // ScrollSpy pour activer auto la section
+  // ScrollSpy pour activer automatiquement la section
   useEffect(() => {
     const handleScroll = () => {
       const scrollPos = window.scrollY + 120; // marge top pour compenser la navbar
@@ -88,7 +96,7 @@ const Navbar = () => {
           </li>
         </ul>
 
-        {/* Mobile */}
+        {/* Mobile : interrupteur + hamburger */}
         <div className="md:hidden flex items-center gap-2">
           <label className="swap swap-rotate mr-3">
             <input
@@ -100,6 +108,7 @@ const Navbar = () => {
             <Moon className="swap-on fill-current w-7 h-7 text-base-content" />
           </label>
 
+          {/* Hamburger mobile */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             className="flex flex-col justify-center items-center w-10 h-10 gap-1 p-2"
@@ -116,6 +125,52 @@ const Navbar = () => {
             ></span>
           </button>
         </div>
+      </div>
+
+      {/* Menu mobile */}
+      <div
+        className={`md:hidden fixed top-16 left-0 w-full h-[calc(100%-4rem)] bg-base-200 flex flex-col items-center justify-center transform transition-all duration-500 ease-in-out ${
+          menuOpen ? "translate-y-0 opacity-100 visible" : "-translate-y-full opacity-0 invisible"
+        }`}
+      >
+        <ul className="flex flex-col space-y-8 font-poppins text-3xl font-bold text-center">
+          {mobileLinks.map((link) => (
+            <li key={link.name}>
+              {link.external ? (
+                <a
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition text-base-content hover:text-red-400"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {link.name}
+                </a>
+              ) : (
+                <a
+                  href={link.href}
+                  className={`transition ${
+                    active === link.name ? "text-red-500" : "text-base-content"
+                  } hover:text-red-400`}
+                  onClick={() => {
+                    setActive(link.name);
+                    setMenuOpen(false);
+
+                    const section = document.querySelector(link.href);
+                    if (section) {
+                      const yOffset = 70;
+                      const y =
+                        section.getBoundingClientRect().top + window.pageYOffset - yOffset;
+                      window.scrollTo({ top: y, behavior: "smooth" });
+                    }
+                  }}
+                >
+                  {link.name}
+                </a>
+              )}
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );
